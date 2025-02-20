@@ -38,4 +38,4 @@ We welcome contributions! Please feel free to submit a pull request or open an i
 
 ### License
 
-This project is licensed under the MIT License. See the [LICENSE](../LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/naviat/solana-eyes) file for details.
