@@ -5,6 +5,7 @@ from modules.slot_monitor import get_slot_info, get_block_heights
 from modules.tx_monitor import get_transaction_stats, get_transaction_types
 from modules.version import get_version
 from modules.websocket_monitor import check_websocket_health
+from modules.epoch_monitor import get_epoch_info
 
 
 async def run_async_tasks():
@@ -16,7 +17,8 @@ async def run_async_tasks():
         "tx_stats": get_transaction_stats(),
         "tx_types": get_transaction_types(),
         "version": get_version(),
-        "websocket": check_websocket_health()
+        "websocket": check_websocket_health(),
+        "epoch_info": get_epoch_info()
     }
 
     try:

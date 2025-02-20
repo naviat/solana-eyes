@@ -393,3 +393,381 @@
 2025-02-20 00:39:32.661 | INFO     | exporter.exporter:graceful_shutdown:13 - Received exit signal SIGINT...
 2025-02-20 00:39:32.662 | INFO     | exporter.exporter:graceful_shutdown:16 - Cancelling 1 outstanding tasks
 2025-02-20 00:39:32.662 | INFO     | exporter.exporter:main:66 - Shutting down RPC monitor
+2025-02-20 00:47:17.486 | INFO     | exporter.exporter:run_exporter:32 - Starting Prometheus metrics server on localhost:9090/metrics
+2025-02-20 00:47:17.491 | INFO     | exporter.exporter:run_exporter:37 - Starting collection of metrics
+2025-02-20 00:47:17.491 | INFO     | exporter.collector:collect:36 - Starting metrics collection
+2025-02-20 00:47:17.790 | INFO     | modules.node_health:get_health:33 - RPC node is healthy
+2025-02-20 00:47:17.793 | INFO     | modules.tx_monitor:get_transaction_stats:41 - Processed 253823 transactions, Success rate: 100.00%, Error rate: 0.00%
+2025-02-20 00:47:17.794 | DEBUG    | modules.tx_monitor:get_transaction_stats:56 - Transaction latency - Avg: 0.00ms, P90: 0.00ms
+2025-02-20 00:47:17.851 | INFO     | modules.websocket_monitor:check_websocket_health:22 - Successfully connected to WebSocket endpoint: ws://localhost:8800
+2025-02-20 00:47:17.853 | INFO     | modules.epoch_monitor:get_epoch_info:38 - Epoch info - Current: 745, Slot Index: 23049, Slots in Epoch: 432000
+2025-02-20 00:47:17.858 | INFO     | modules.version:get_version:39 - RPC node version: 2.1.13
+2025-02-20 00:47:17.957 | INFO     | modules.websocket_monitor:check_websocket_health:35 - WebSocket connection healthy - Latency: 464.69ms
+2025-02-20 00:47:17.962 | INFO     | modules.epoch_monitor:get_epoch_info:53 - Highest processed slot: 321855118
+2025-02-20 00:47:18.069 | DEBUG    | modules.websocket_monitor:check_websocket_health:46 - Successfully unsubscribed from slot updates
+2025-02-20 00:47:18.143 | DEBUG    | modules.slot_monitor:get_block_heights:79 - Block height difference: 1
+2025-02-20 00:47:18.148 | DEBUG    | modules.slot_monitor:get_slot_info:47 - Slot difference: 0
+2025-02-20 00:47:18.178 | INFO     | modules.tx_monitor:get_transaction_types:101 - Transaction type distribution: {'success': 83, 'error': 15, 'memo': 2}
+2025-02-20 00:47:19.268 | INFO     | exporter.collector:collect:42 - Metrics collection completed in 1.78 seconds
+2025-02-20 00:47:19.270 | INFO     | exporter.exporter:run_exporter:40 - Metrics collected successfully in 1.78 seconds
+2025-02-20 00:47:19.271 | INFO     | exporter.exporter:run_exporter:44 - Sleeping for 30 seconds
+2025-02-20 00:47:49.273 | INFO     | exporter.exporter:run_exporter:37 - Starting collection of metrics
+2025-02-20 00:47:49.274 | INFO     | exporter.collector:collect:36 - Starting metrics collection
+2025-02-20 00:47:49.560 | INFO     | modules.node_health:get_health:33 - RPC node is healthy
+2025-02-20 00:47:49.563 | INFO     | modules.websocket_monitor:check_websocket_health:22 - Successfully connected to WebSocket endpoint: ws://localhost:8800
+2025-02-20 00:47:49.603 | INFO     | modules.tx_monitor:get_transaction_stats:41 - Processed 253823 transactions, Success rate: 100.00%, Error rate: 0.00%
+2025-02-20 00:47:49.604 | DEBUG    | modules.tx_monitor:get_transaction_stats:56 - Transaction latency - Avg: 0.00ms, P90: 0.00ms
+2025-02-20 00:47:49.619 | INFO     | modules.epoch_monitor:get_epoch_info:38 - Epoch info - Current: 745, Slot Index: 23130, Slots in Epoch: 432000
+2025-02-20 00:47:49.623 | INFO     | modules.version:get_version:39 - RPC node version: 2.1.13
+2025-02-20 00:47:49.671 | INFO     | modules.websocket_monitor:check_websocket_health:35 - WebSocket connection healthy - Latency: 394.51ms
+2025-02-20 00:47:49.714 | DEBUG    | modules.websocket_monitor:check_websocket_health:46 - Successfully unsubscribed from slot updates
+2025-02-20 00:47:49.727 | INFO     | modules.epoch_monitor:get_epoch_info:53 - Highest processed slot: 321855118
+2025-02-20 00:47:49.802 | DEBUG    | modules.slot_monitor:get_block_heights:79 - Block height difference: 0
+2025-02-20 00:47:49.869 | DEBUG    | modules.slot_monitor:get_slot_info:47 - Slot difference: 1
+2025-02-20 00:47:49.968 | INFO     | modules.tx_monitor:get_transaction_types:101 - Transaction type distribution: {'success': 94, 'error': 6}
+2025-02-20 00:47:50.892 | INFO     | exporter.collector:collect:42 - Metrics collection completed in 1.62 seconds
+2025-02-20 00:47:50.893 | INFO     | exporter.exporter:run_exporter:40 - Metrics collected successfully in 1.62 seconds
+2025-02-20 00:47:50.893 | INFO     | exporter.exporter:run_exporter:44 - Sleeping for 30 seconds
+2025-02-20 00:48:20.895 | INFO     | exporter.exporter:run_exporter:37 - Starting collection of metrics
+2025-02-20 00:48:20.897 | INFO     | exporter.collector:collect:36 - Starting metrics collection
+2025-02-20 00:48:21.187 | INFO     | modules.node_health:get_health:33 - RPC node is healthy
+2025-02-20 00:48:21.188 | INFO     | modules.epoch_monitor:get_epoch_info:38 - Epoch info - Current: 745, Slot Index: 23211, Slots in Epoch: 432000
+2025-02-20 00:48:21.190 | INFO     | modules.tx_monitor:get_transaction_stats:41 - Processed 249409 transactions, Success rate: 100.00%, Error rate: 0.00%
+2025-02-20 00:48:21.191 | DEBUG    | modules.tx_monitor:get_transaction_stats:56 - Transaction latency - Avg: 0.00ms, P90: 0.00ms
+2025-02-20 00:48:21.192 | INFO     | modules.websocket_monitor:check_websocket_health:22 - Successfully connected to WebSocket endpoint: ws://localhost:8800
+2025-02-20 00:48:21.198 | INFO     | modules.version:get_version:39 - RPC node version: 2.1.13
+2025-02-20 00:48:21.295 | INFO     | modules.epoch_monitor:get_epoch_info:53 - Highest processed slot: 321855118
+2025-02-20 00:48:21.308 | INFO     | modules.websocket_monitor:check_websocket_health:35 - WebSocket connection healthy - Latency: 408.36ms
+2025-02-20 00:48:21.349 | DEBUG    | modules.websocket_monitor:check_websocket_health:46 - Successfully unsubscribed from slot updates
+2025-02-20 00:48:21.362 | INFO     | modules.tx_monitor:get_transaction_types:101 - Transaction type distribution: {'error': 16, 'success': 84}
+2025-02-20 00:48:21.495 | DEBUG    | modules.slot_monitor:get_block_heights:79 - Block height difference: 1
+2025-02-20 00:48:21.497 | DEBUG    | modules.slot_monitor:get_slot_info:47 - Slot difference: 1
+2025-02-20 00:48:22.464 | INFO     | exporter.collector:collect:42 - Metrics collection completed in 1.57 seconds
+2025-02-20 00:48:22.465 | INFO     | exporter.exporter:run_exporter:40 - Metrics collected successfully in 1.57 seconds
+2025-02-20 00:48:22.466 | INFO     | exporter.exporter:run_exporter:44 - Sleeping for 30 seconds
+2025-02-20 00:48:52.468 | INFO     | exporter.exporter:run_exporter:37 - Starting collection of metrics
+2025-02-20 00:48:52.468 | INFO     | exporter.collector:collect:36 - Starting metrics collection
+2025-02-20 00:48:52.752 | INFO     | modules.epoch_monitor:get_epoch_info:38 - Epoch info - Current: 745, Slot Index: 23290, Slots in Epoch: 432000
+2025-02-20 00:48:52.754 | INFO     | modules.tx_monitor:get_transaction_stats:41 - Processed 249409 transactions, Success rate: 100.00%, Error rate: 0.00%
+2025-02-20 00:48:52.755 | DEBUG    | modules.tx_monitor:get_transaction_stats:56 - Transaction latency - Avg: 0.00ms, P90: 0.00ms
+2025-02-20 00:48:52.755 | INFO     | modules.websocket_monitor:check_websocket_health:22 - Successfully connected to WebSocket endpoint: ws://localhost:8800
+2025-02-20 00:48:52.758 | INFO     | modules.version:get_version:39 - RPC node version: 2.1.13
+2025-02-20 00:48:52.816 | INFO     | modules.node_health:get_health:33 - RPC node is healthy
+2025-02-20 00:48:52.861 | INFO     | modules.epoch_monitor:get_epoch_info:53 - Highest processed slot: 321855118
+2025-02-20 00:48:52.862 | INFO     | modules.websocket_monitor:check_websocket_health:35 - WebSocket connection healthy - Latency: 393.08ms
+2025-02-20 00:48:52.972 | DEBUG    | modules.websocket_monitor:check_websocket_health:46 - Successfully unsubscribed from slot updates
+2025-02-20 00:48:53.007 | DEBUG    | modules.slot_monitor:get_block_heights:79 - Block height difference: 1
+2025-02-20 00:48:53.084 | DEBUG    | modules.slot_monitor:get_slot_info:47 - Slot difference: 1
+2025-02-20 00:48:53.173 | INFO     | modules.tx_monitor:get_transaction_types:101 - Transaction type distribution: {'error': 22, 'success': 77, 'memo': 1}
+2025-02-20 00:48:54.092 | INFO     | exporter.collector:collect:42 - Metrics collection completed in 1.62 seconds
+2025-02-20 00:48:54.093 | INFO     | exporter.exporter:run_exporter:40 - Metrics collected successfully in 1.63 seconds
+2025-02-20 00:48:54.093 | INFO     | exporter.exporter:run_exporter:44 - Sleeping for 30 seconds
+2025-02-20 00:49:24.095 | INFO     | exporter.exporter:run_exporter:37 - Starting collection of metrics
+2025-02-20 00:49:24.096 | INFO     | exporter.collector:collect:36 - Starting metrics collection
+2025-02-20 00:49:24.381 | INFO     | modules.epoch_monitor:get_epoch_info:38 - Epoch info - Current: 745, Slot Index: 23373, Slots in Epoch: 432000
+2025-02-20 00:49:24.383 | INFO     | modules.websocket_monitor:check_websocket_health:22 - Successfully connected to WebSocket endpoint: ws://localhost:8800
+2025-02-20 00:49:24.386 | INFO     | modules.node_health:get_health:33 - RPC node is healthy
+2025-02-20 00:49:24.387 | INFO     | modules.tx_monitor:get_transaction_stats:41 - Processed 249134 transactions, Success rate: 100.00%, Error rate: 0.00%
+2025-02-20 00:49:24.387 | DEBUG    | modules.tx_monitor:get_transaction_stats:56 - Transaction latency - Avg: 0.00ms, P90: 0.00ms
+2025-02-20 00:49:24.396 | INFO     | modules.version:get_version:39 - RPC node version: 2.1.13
+2025-02-20 00:49:24.492 | INFO     | modules.epoch_monitor:get_epoch_info:53 - Highest processed slot: 321855118
+2025-02-20 00:49:24.494 | INFO     | modules.websocket_monitor:check_websocket_health:35 - WebSocket connection healthy - Latency: 394.75ms
+2025-02-20 00:49:24.609 | DEBUG    | modules.websocket_monitor:check_websocket_health:46 - Successfully unsubscribed from slot updates
+2025-02-20 00:49:24.669 | DEBUG    | modules.slot_monitor:get_block_heights:79 - Block height difference: 0
+2025-02-20 00:49:24.671 | DEBUG    | modules.slot_monitor:get_slot_info:47 - Slot difference: 1
+2025-02-20 00:49:24.888 | INFO     | modules.tx_monitor:get_transaction_types:101 - Transaction type distribution: {'success': 87, 'error': 13}
+2025-02-20 00:49:25.733 | INFO     | exporter.collector:collect:42 - Metrics collection completed in 1.64 seconds
+2025-02-20 00:49:25.734 | INFO     | exporter.exporter:run_exporter:40 - Metrics collected successfully in 1.64 seconds
+2025-02-20 00:49:25.735 | INFO     | exporter.exporter:run_exporter:44 - Sleeping for 30 seconds
+2025-02-20 00:49:55.736 | INFO     | exporter.exporter:run_exporter:37 - Starting collection of metrics
+2025-02-20 00:49:55.737 | INFO     | exporter.collector:collect:36 - Starting metrics collection
+2025-02-20 00:49:56.024 | INFO     | modules.websocket_monitor:check_websocket_health:22 - Successfully connected to WebSocket endpoint: ws://localhost:8800
+2025-02-20 00:49:56.083 | INFO     | modules.epoch_monitor:get_epoch_info:38 - Epoch info - Current: 745, Slot Index: 23454, Slots in Epoch: 432000
+2025-02-20 00:49:56.085 | INFO     | modules.node_health:get_health:33 - RPC node is healthy
+2025-02-20 00:49:56.088 | INFO     | modules.tx_monitor:get_transaction_types:101 - Transaction type distribution: {'error': 27, 'success': 72, 'memo': 1}
+2025-02-20 00:49:56.089 | INFO     | modules.tx_monitor:get_transaction_stats:41 - Processed 249134 transactions, Success rate: 100.00%, Error rate: 0.00%
+2025-02-20 00:49:56.090 | DEBUG    | modules.tx_monitor:get_transaction_stats:56 - Transaction latency - Avg: 0.00ms, P90: 0.00ms
+2025-02-20 00:49:56.096 | INFO     | modules.version:get_version:39 - RPC node version: 2.1.13
+2025-02-20 00:49:56.129 | INFO     | modules.websocket_monitor:check_websocket_health:35 - WebSocket connection healthy - Latency: 389.29ms
+2025-02-20 00:49:56.189 | INFO     | modules.epoch_monitor:get_epoch_info:53 - Highest processed slot: 321855118
+2025-02-20 00:49:56.196 | DEBUG    | modules.websocket_monitor:check_websocket_health:46 - Successfully unsubscribed from slot updates
+2025-02-20 00:49:56.323 | DEBUG    | modules.slot_monitor:get_slot_info:47 - Slot difference: 1
+2025-02-20 00:49:56.332 | DEBUG    | modules.slot_monitor:get_block_heights:79 - Block height difference: 1
+2025-02-20 00:49:57.347 | INFO     | exporter.collector:collect:42 - Metrics collection completed in 1.61 seconds
+2025-02-20 00:49:57.348 | INFO     | exporter.exporter:run_exporter:40 - Metrics collected successfully in 1.61 seconds
+2025-02-20 00:49:57.349 | INFO     | exporter.exporter:run_exporter:44 - Sleeping for 30 seconds
+2025-02-20 00:50:27.350 | INFO     | exporter.exporter:run_exporter:37 - Starting collection of metrics
+2025-02-20 00:50:27.352 | INFO     | exporter.collector:collect:36 - Starting metrics collection
+2025-02-20 00:50:27.641 | INFO     | modules.node_health:get_health:33 - RPC node is healthy
+2025-02-20 00:50:27.644 | INFO     | modules.tx_monitor:get_transaction_stats:41 - Processed 254404 transactions, Success rate: 100.00%, Error rate: 0.00%
+2025-02-20 00:50:27.644 | DEBUG    | modules.tx_monitor:get_transaction_stats:56 - Transaction latency - Avg: 0.00ms, P90: 0.00ms
+2025-02-20 00:50:27.646 | INFO     | modules.websocket_monitor:check_websocket_health:22 - Successfully connected to WebSocket endpoint: ws://localhost:8800
+2025-02-20 00:50:27.651 | INFO     | modules.version:get_version:39 - RPC node version: 2.1.13
+2025-02-20 00:50:27.756 | INFO     | modules.websocket_monitor:check_websocket_health:35 - WebSocket connection healthy - Latency: 401.27ms
+2025-02-20 00:50:27.794 | INFO     | modules.epoch_monitor:get_epoch_info:38 - Epoch info - Current: 745, Slot Index: 23535, Slots in Epoch: 432000
+2025-02-20 00:50:27.798 | INFO     | modules.tx_monitor:get_transaction_types:101 - Transaction type distribution: {'success': 72, 'error': 28}
+2025-02-20 00:50:27.871 | DEBUG    | modules.websocket_monitor:check_websocket_health:46 - Successfully unsubscribed from slot updates
+2025-02-20 00:50:27.899 | INFO     | modules.epoch_monitor:get_epoch_info:53 - Highest processed slot: 321855118
+2025-02-20 00:50:27.942 | DEBUG    | modules.slot_monitor:get_block_heights:79 - Block height difference: 0
+2025-02-20 00:50:27.952 | DEBUG    | modules.slot_monitor:get_slot_info:47 - Slot difference: 1
+2025-02-20 00:50:29.019 | INFO     | exporter.collector:collect:42 - Metrics collection completed in 1.67 seconds
+2025-02-20 00:50:29.020 | INFO     | exporter.exporter:run_exporter:40 - Metrics collected successfully in 1.67 seconds
+2025-02-20 00:50:29.021 | INFO     | exporter.exporter:run_exporter:44 - Sleeping for 30 seconds
+2025-02-20 00:50:59.022 | INFO     | exporter.exporter:run_exporter:37 - Starting collection of metrics
+2025-02-20 00:50:59.024 | INFO     | exporter.collector:collect:36 - Starting metrics collection
+2025-02-20 00:50:59.308 | INFO     | modules.epoch_monitor:get_epoch_info:38 - Epoch info - Current: 745, Slot Index: 23615, Slots in Epoch: 432000
+2025-02-20 00:50:59.311 | INFO     | modules.node_health:get_health:33 - RPC node is healthy
+2025-02-20 00:50:59.319 | INFO     | modules.websocket_monitor:check_websocket_health:22 - Successfully connected to WebSocket endpoint: ws://localhost:8800
+2025-02-20 00:50:59.370 | INFO     | modules.tx_monitor:get_transaction_stats:41 - Processed 254404 transactions, Success rate: 100.00%, Error rate: 0.00%
+2025-02-20 00:50:59.371 | DEBUG    | modules.tx_monitor:get_transaction_stats:56 - Transaction latency - Avg: 0.00ms, P90: 0.00ms
+2025-02-20 00:50:59.376 | INFO     | modules.version:get_version:39 - RPC node version: 2.1.13
+2025-02-20 00:50:59.420 | INFO     | modules.epoch_monitor:get_epoch_info:53 - Highest processed slot: 321855118
+2025-02-20 00:50:59.431 | INFO     | modules.websocket_monitor:check_websocket_health:35 - WebSocket connection healthy - Latency: 404.74ms
+2025-02-20 00:50:59.446 | INFO     | modules.tx_monitor:get_transaction_types:101 - Transaction type distribution: {'success': 89, 'error': 10, 'memo': 1}
+2025-02-20 00:50:59.533 | DEBUG    | modules.slot_monitor:get_slot_info:47 - Slot difference: 0
+2025-02-20 00:50:59.539 | DEBUG    | modules.websocket_monitor:check_websocket_health:46 - Successfully unsubscribed from slot updates
+2025-02-20 00:50:59.615 | DEBUG    | modules.slot_monitor:get_block_heights:79 - Block height difference: 1
+2025-02-20 00:51:00.650 | INFO     | exporter.collector:collect:42 - Metrics collection completed in 1.62 seconds
+2025-02-20 00:51:00.651 | INFO     | exporter.exporter:run_exporter:40 - Metrics collected successfully in 1.63 seconds
+2025-02-20 00:51:00.652 | INFO     | exporter.exporter:run_exporter:44 - Sleeping for 30 seconds
+2025-02-20 00:51:30.653 | INFO     | exporter.exporter:run_exporter:37 - Starting collection of metrics
+2025-02-20 00:51:30.655 | INFO     | exporter.collector:collect:36 - Starting metrics collection
+2025-02-20 00:51:30.940 | INFO     | modules.websocket_monitor:check_websocket_health:22 - Successfully connected to WebSocket endpoint: ws://localhost:8800
+2025-02-20 00:51:31.021 | INFO     | modules.epoch_monitor:get_epoch_info:38 - Epoch info - Current: 745, Slot Index: 23696, Slots in Epoch: 432000
+2025-02-20 00:51:31.023 | INFO     | modules.node_health:get_health:33 - RPC node is healthy
+2025-02-20 00:51:31.025 | INFO     | modules.tx_monitor:get_transaction_stats:41 - Processed 248752 transactions, Success rate: 100.00%, Error rate: 0.00%
+2025-02-20 00:51:31.026 | DEBUG    | modules.tx_monitor:get_transaction_stats:56 - Transaction latency - Avg: 0.00ms, P90: 0.00ms
+2025-02-20 00:51:31.027 | INFO     | modules.tx_monitor:get_transaction_types:101 - Transaction type distribution: {'success': 75, 'error': 24, 'memo': 1}
+2025-02-20 00:51:31.032 | INFO     | modules.version:get_version:39 - RPC node version: 2.1.13
+2025-02-20 00:51:31.050 | INFO     | modules.websocket_monitor:check_websocket_health:35 - WebSocket connection healthy - Latency: 393.04ms
+2025-02-20 00:51:31.129 | INFO     | modules.epoch_monitor:get_epoch_info:53 - Highest processed slot: 321855118
+2025-02-20 00:51:31.158 | DEBUG    | modules.websocket_monitor:check_websocket_health:46 - Successfully unsubscribed from slot updates
+2025-02-20 00:51:31.303 | DEBUG    | modules.slot_monitor:get_block_heights:79 - Block height difference: 0
+2025-02-20 00:51:31.304 | DEBUG    | modules.slot_monitor:get_slot_info:47 - Slot difference: 1
+2025-02-20 00:51:32.301 | INFO     | exporter.collector:collect:42 - Metrics collection completed in 1.65 seconds
+2025-02-20 00:51:32.301 | INFO     | exporter.exporter:run_exporter:40 - Metrics collected successfully in 1.65 seconds
+2025-02-20 00:51:32.302 | INFO     | exporter.exporter:run_exporter:44 - Sleeping for 30 seconds
+2025-02-20 00:52:02.303 | INFO     | exporter.exporter:run_exporter:37 - Starting collection of metrics
+2025-02-20 00:52:02.304 | INFO     | exporter.collector:collect:36 - Starting metrics collection
+2025-02-20 00:52:02.595 | INFO     | modules.websocket_monitor:check_websocket_health:22 - Successfully connected to WebSocket endpoint: ws://localhost:8800
+2025-02-20 00:52:02.835 | INFO     | modules.websocket_monitor:check_websocket_health:35 - WebSocket connection healthy - Latency: 528.31ms
+2025-02-20 00:52:02.945 | DEBUG    | modules.websocket_monitor:check_websocket_health:46 - Successfully unsubscribed from slot updates
+2025-02-20 00:52:02.974 | INFO     | modules.tx_monitor:get_transaction_stats:41 - Processed 248752 transactions, Success rate: 100.00%, Error rate: 0.00%
+2025-02-20 00:52:02.975 | DEBUG    | modules.tx_monitor:get_transaction_stats:56 - Transaction latency - Avg: 0.00ms, P90: 0.00ms
+2025-02-20 00:52:02.976 | INFO     | modules.node_health:get_health:33 - RPC node is healthy
+2025-02-20 00:52:02.977 | INFO     | modules.epoch_monitor:get_epoch_info:38 - Epoch info - Current: 745, Slot Index: 23777, Slots in Epoch: 432000
+2025-02-20 00:52:02.982 | INFO     | modules.version:get_version:39 - RPC node version: 2.1.13
+2025-02-20 00:52:03.013 | INFO     | modules.tx_monitor:get_transaction_types:101 - Transaction type distribution: {'success': 89, 'error': 11}
+2025-02-20 00:52:03.085 | INFO     | modules.epoch_monitor:get_epoch_info:53 - Highest processed slot: 321855118
+2025-02-20 00:52:03.359 | DEBUG    | modules.slot_monitor:get_slot_info:47 - Slot difference: 1
+2025-02-20 00:52:03.360 | DEBUG    | modules.slot_monitor:get_block_heights:79 - Block height difference: 1
+2025-02-20 00:52:04.060 | INFO     | exporter.collector:collect:42 - Metrics collection completed in 1.75 seconds
+2025-02-20 00:52:04.061 | INFO     | exporter.exporter:run_exporter:40 - Metrics collected successfully in 1.76 seconds
+2025-02-20 00:52:04.062 | INFO     | exporter.exporter:run_exporter:44 - Sleeping for 30 seconds
+2025-02-20 00:52:26.143 | INFO     | exporter.exporter:graceful_shutdown:13 - Received exit signal SIGINT...
+2025-02-20 00:52:26.143 | INFO     | exporter.exporter:graceful_shutdown:16 - Cancelling 1 outstanding tasks
+2025-02-20 00:52:26.143 | INFO     | exporter.exporter:main:66 - Shutting down RPC monitor
+2025-02-20 00:52:29.922 | INFO     | exporter.exporter:run_exporter:32 - Starting Prometheus metrics server on localhost:9090/metrics
+2025-02-20 00:52:29.929 | INFO     | exporter.exporter:run_exporter:37 - Starting collection of metrics
+2025-02-20 00:52:29.929 | INFO     | exporter.collector:collect:36 - Starting metrics collection
+2025-02-20 00:52:30.237 | DEBUG    | modules.slot_monitor:get_block_heights:116 - Local RPC block height: 300133718
+2025-02-20 00:52:30.238 | DEBUG    | modules.slot_monitor:get_slot_info:73 - Local RPC slot: 321863847
+2025-02-20 00:52:30.241 | INFO     | modules.websocket_monitor:check_websocket_health:22 - Successfully connected to WebSocket endpoint: ws://localhost:8800
+2025-02-20 00:52:30.248 | INFO     | modules.version:get_version:39 - RPC node version: 2.1.13
+2025-02-20 00:52:30.267 | INFO     | modules.node_health:get_health:33 - RPC node is healthy
+2025-02-20 00:52:30.267 | INFO     | modules.tx_monitor:get_transaction_stats:41 - Processed 243328 transactions, Success rate: 100.00%, Error rate: 0.00%
+2025-02-20 00:52:30.268 | DEBUG    | modules.tx_monitor:get_transaction_stats:56 - Transaction latency - Avg: 0.00ms, P90: 0.00ms
+2025-02-20 00:52:30.271 | INFO     | modules.epoch_monitor:get_epoch_info:38 - Epoch info - Current: 745, Slot Index: 23847, Slots in Epoch: 432000
+2025-02-20 00:52:30.353 | INFO     | modules.websocket_monitor:check_websocket_health:35 - WebSocket connection healthy - Latency: 423.41ms
+2025-02-20 00:52:30.380 | INFO     | modules.epoch_monitor:get_epoch_info:53 - Highest processed slot: 321855118
+2025-02-20 00:52:30.425 | INFO     | modules.tx_monitor:get_transaction_types:101 - Transaction type distribution: {'success': 77, 'error': 23}
+2025-02-20 00:52:30.429 | DEBUG    | modules.websocket_monitor:check_websocket_health:46 - Successfully unsubscribed from slot updates
+2025-02-20 00:52:30.587 | DEBUG    | modules.slot_monitor:get_block_heights:123 - Network block height: 300133719
+2025-02-20 00:52:30.587 | INFO     | modules.slot_monitor:get_block_heights:135 - Block height difference: -1
+2025-02-20 00:52:30.597 | DEBUG    | modules.slot_monitor:get_slot_info:80 - Network RPC slot: 321863848
+2025-02-20 00:52:30.597 | INFO     | modules.slot_monitor:get_slot_info:92 - Slot difference: -1
+2025-02-20 00:52:30.819 | DEBUG    | modules.slot_monitor:get_shred_slots:43 - Local max shred insert slot: 321863881
+2025-02-20 00:52:30.820 | DEBUG    | modules.slot_monitor:get_shred_slots:53 - Local max retransmit slot: 321863882
+2025-02-20 00:52:31.047 | DEBUG    | modules.slot_monitor:get_shred_slots:40 - Network max shred insert slot: 321863882
+2025-02-20 00:52:31.047 | DEBUG    | modules.slot_monitor:get_shred_slots:50 - Network max retransmit slot: 321863883
+2025-02-20 00:52:31.537 | INFO     | exporter.collector:collect:42 - Metrics collection completed in 1.61 seconds
+2025-02-20 00:52:31.538 | INFO     | exporter.exporter:run_exporter:40 - Metrics collected successfully in 1.61 seconds
+2025-02-20 00:52:31.539 | INFO     | exporter.exporter:run_exporter:44 - Sleeping for 30 seconds
+2025-02-20 00:53:01.540 | INFO     | exporter.exporter:run_exporter:37 - Starting collection of metrics
+2025-02-20 00:53:01.541 | INFO     | exporter.collector:collect:36 - Starting metrics collection
+2025-02-20 00:53:01.830 | INFO     | modules.epoch_monitor:get_epoch_info:38 - Epoch info - Current: 745, Slot Index: 23925, Slots in Epoch: 432000
+2025-02-20 00:53:01.831 | DEBUG    | modules.slot_monitor:get_block_heights:116 - Local RPC block height: 300133796
+2025-02-20 00:53:01.832 | INFO     | modules.websocket_monitor:check_websocket_health:22 - Successfully connected to WebSocket endpoint: ws://localhost:8800
+2025-02-20 00:53:01.865 | INFO     | modules.tx_monitor:get_transaction_stats:41 - Processed 243328 transactions, Success rate: 100.00%, Error rate: 0.00%
+2025-02-20 00:53:01.866 | DEBUG    | modules.tx_monitor:get_transaction_stats:56 - Transaction latency - Avg: 0.00ms, P90: 0.00ms
+2025-02-20 00:53:01.866 | DEBUG    | modules.slot_monitor:get_slot_info:73 - Local RPC slot: 321863925
+2025-02-20 00:53:01.867 | INFO     | modules.node_health:get_health:33 - RPC node is healthy
+2025-02-20 00:53:01.872 | INFO     | modules.version:get_version:39 - RPC node version: 2.1.13
+2025-02-20 00:53:01.929 | INFO     | modules.tx_monitor:get_transaction_types:101 - Transaction type distribution: {'success': 70, 'error': 30}
+2025-02-20 00:53:01.939 | INFO     | modules.epoch_monitor:get_epoch_info:53 - Highest processed slot: 321855118
+2025-02-20 00:53:01.945 | INFO     | modules.websocket_monitor:check_websocket_health:35 - WebSocket connection healthy - Latency: 402.07ms
+2025-02-20 00:53:02.058 | DEBUG    | modules.websocket_monitor:check_websocket_health:46 - Successfully unsubscribed from slot updates
+2025-02-20 00:53:02.087 | DEBUG    | modules.slot_monitor:get_block_heights:123 - Network block height: 300133796
+2025-02-20 00:53:02.087 | INFO     | modules.slot_monitor:get_block_heights:135 - Block height difference: 0
+2025-02-20 00:53:02.115 | DEBUG    | modules.slot_monitor:get_slot_info:80 - Network RPC slot: 321863926
+2025-02-20 00:53:02.116 | INFO     | modules.slot_monitor:get_slot_info:92 - Slot difference: -1
+2025-02-20 00:53:02.339 | DEBUG    | modules.slot_monitor:get_shred_slots:43 - Local max shred insert slot: 321863959
+2025-02-20 00:53:02.340 | DEBUG    | modules.slot_monitor:get_shred_slots:53 - Local max retransmit slot: 321863959
+2025-02-20 00:53:02.508 | DEBUG    | modules.slot_monitor:get_shred_slots:40 - Network max shred insert slot: 321863959
+2025-02-20 00:53:02.508 | DEBUG    | modules.slot_monitor:get_shred_slots:50 - Network max retransmit slot: 321863960
+2025-02-20 00:53:03.169 | INFO     | exporter.collector:collect:42 - Metrics collection completed in 1.63 seconds
+2025-02-20 00:53:03.170 | INFO     | exporter.exporter:run_exporter:40 - Metrics collected successfully in 1.63 seconds
+2025-02-20 00:53:03.171 | INFO     | exporter.exporter:run_exporter:44 - Sleeping for 30 seconds
+2025-02-20 00:53:33.173 | INFO     | exporter.exporter:run_exporter:37 - Starting collection of metrics
+2025-02-20 00:53:33.174 | INFO     | exporter.collector:collect:36 - Starting metrics collection
+2025-02-20 00:53:33.461 | INFO     | modules.node_health:get_health:33 - RPC node is healthy
+2025-02-20 00:53:33.465 | INFO     | modules.websocket_monitor:check_websocket_health:22 - Successfully connected to WebSocket endpoint: ws://localhost:8800
+2025-02-20 00:53:33.567 | DEBUG    | modules.slot_monitor:get_slot_info:73 - Local RPC slot: 321864003
+2025-02-20 00:53:33.569 | INFO     | modules.epoch_monitor:get_epoch_info:38 - Epoch info - Current: 745, Slot Index: 24003, Slots in Epoch: 432000
+2025-02-20 00:53:33.571 | DEBUG    | modules.slot_monitor:get_block_heights:116 - Local RPC block height: 300133874
+2025-02-20 00:53:33.573 | INFO     | modules.tx_monitor:get_transaction_stats:41 - Processed 243968 transactions, Success rate: 100.00%, Error rate: 0.00%
+2025-02-20 00:53:33.574 | DEBUG    | modules.tx_monitor:get_transaction_stats:56 - Transaction latency - Avg: 0.00ms, P90: 0.00ms
+2025-02-20 00:53:33.575 | INFO     | modules.tx_monitor:get_transaction_types:101 - Transaction type distribution: {'success': 86, 'error': 14}
+2025-02-20 00:53:33.576 | INFO     | modules.websocket_monitor:check_websocket_health:35 - WebSocket connection healthy - Latency: 399.83ms
+2025-02-20 00:53:33.580 | INFO     | modules.version:get_version:39 - RPC node version: 2.1.13
+2025-02-20 00:53:33.677 | INFO     | modules.epoch_monitor:get_epoch_info:53 - Highest processed slot: 321855118
+2025-02-20 00:53:33.686 | DEBUG    | modules.websocket_monitor:check_websocket_health:46 - Successfully unsubscribed from slot updates
+2025-02-20 00:53:33.895 | DEBUG    | modules.slot_monitor:get_block_heights:123 - Network block height: 300133876
+2025-02-20 00:53:33.896 | INFO     | modules.slot_monitor:get_block_heights:135 - Block height difference: -2
+2025-02-20 00:53:33.899 | DEBUG    | modules.slot_monitor:get_slot_info:80 - Network RPC slot: 321864005
+2025-02-20 00:53:33.899 | INFO     | modules.slot_monitor:get_slot_info:92 - Slot difference: -2
+2025-02-20 00:53:34.114 | DEBUG    | modules.slot_monitor:get_shred_slots:43 - Local max shred insert slot: 321864038
+2025-02-20 00:53:34.115 | DEBUG    | modules.slot_monitor:get_shred_slots:53 - Local max retransmit slot: 321864038
+2025-02-20 00:53:34.285 | DEBUG    | modules.slot_monitor:get_shred_slots:40 - Network max shred insert slot: 321864038
+2025-02-20 00:53:34.285 | DEBUG    | modules.slot_monitor:get_shred_slots:50 - Network max retransmit slot: 321864039
+2025-02-20 00:53:34.800 | INFO     | exporter.collector:collect:42 - Metrics collection completed in 1.63 seconds
+2025-02-20 00:53:34.801 | INFO     | exporter.exporter:run_exporter:40 - Metrics collected successfully in 1.63 seconds
+2025-02-20 00:53:34.801 | INFO     | exporter.exporter:run_exporter:44 - Sleeping for 30 seconds
+2025-02-20 00:54:04.802 | INFO     | exporter.exporter:run_exporter:37 - Starting collection of metrics
+2025-02-20 00:54:04.803 | INFO     | exporter.collector:collect:36 - Starting metrics collection
+2025-02-20 00:54:05.093 | INFO     | modules.websocket_monitor:check_websocket_health:22 - Successfully connected to WebSocket endpoint: ws://localhost:8800
+2025-02-20 00:54:05.096 | INFO     | modules.version:get_version:39 - RPC node version: 2.1.13
+2025-02-20 00:54:05.151 | INFO     | modules.node_health:get_health:33 - RPC node is healthy
+2025-02-20 00:54:05.152 | DEBUG    | modules.slot_monitor:get_slot_info:73 - Local RPC slot: 321864084
+2025-02-20 00:54:05.154 | INFO     | modules.tx_monitor:get_transaction_stats:41 - Processed 244212 transactions, Success rate: 100.00%, Error rate: 0.00%
+2025-02-20 00:54:05.154 | DEBUG    | modules.tx_monitor:get_transaction_stats:56 - Transaction latency - Avg: 0.00ms, P90: 0.00ms
+2025-02-20 00:54:05.155 | INFO     | modules.epoch_monitor:get_epoch_info:38 - Epoch info - Current: 745, Slot Index: 24084, Slots in Epoch: 432000
+2025-02-20 00:54:05.156 | DEBUG    | modules.slot_monitor:get_block_heights:116 - Local RPC block height: 300133955
+2025-02-20 00:54:05.158 | INFO     | modules.tx_monitor:get_transaction_types:101 - Transaction type distribution: {'success': 78, 'error': 21, 'memo': 1}
+2025-02-20 00:54:05.206 | INFO     | modules.websocket_monitor:check_websocket_health:35 - WebSocket connection healthy - Latency: 400.59ms
+2025-02-20 00:54:05.218 | DEBUG    | modules.websocket_monitor:check_websocket_health:46 - Successfully unsubscribed from slot updates
+2025-02-20 00:54:05.263 | INFO     | modules.epoch_monitor:get_epoch_info:53 - Highest processed slot: 321855118
+2025-02-20 00:54:05.410 | DEBUG    | modules.slot_monitor:get_block_heights:123 - Network block height: 300133956
+2025-02-20 00:54:05.411 | INFO     | modules.slot_monitor:get_block_heights:135 - Block height difference: -1
+2025-02-20 00:54:05.424 | DEBUG    | modules.slot_monitor:get_slot_info:80 - Network RPC slot: 321864085
+2025-02-20 00:54:05.424 | INFO     | modules.slot_monitor:get_slot_info:92 - Slot difference: -1
+2025-02-20 00:54:05.646 | DEBUG    | modules.slot_monitor:get_shred_slots:43 - Local max shred insert slot: 321864118
+2025-02-20 00:54:05.647 | DEBUG    | modules.slot_monitor:get_shred_slots:53 - Local max retransmit slot: 321864119
+2025-02-20 00:54:05.853 | DEBUG    | modules.slot_monitor:get_shred_slots:40 - Network max shred insert slot: 321864119
+2025-02-20 00:54:05.853 | DEBUG    | modules.slot_monitor:get_shred_slots:50 - Network max retransmit slot: 321864119
+2025-02-20 00:54:06.327 | INFO     | exporter.collector:collect:42 - Metrics collection completed in 1.52 seconds
+2025-02-20 00:54:06.328 | INFO     | exporter.exporter:run_exporter:40 - Metrics collected successfully in 1.53 seconds
+2025-02-20 00:54:06.329 | INFO     | exporter.exporter:run_exporter:44 - Sleeping for 30 seconds
+2025-02-20 00:54:36.331 | INFO     | exporter.exporter:run_exporter:37 - Starting collection of metrics
+2025-02-20 00:54:36.332 | INFO     | exporter.collector:collect:36 - Starting metrics collection
+2025-02-20 00:54:36.620 | INFO     | modules.websocket_monitor:check_websocket_health:22 - Successfully connected to WebSocket endpoint: ws://localhost:8800
+2025-02-20 00:54:36.622 | INFO     | modules.node_health:get_health:33 - RPC node is healthy
+2025-02-20 00:54:36.624 | DEBUG    | modules.slot_monitor:get_block_heights:116 - Local RPC block height: 300134034
+2025-02-20 00:54:36.627 | INFO     | modules.epoch_monitor:get_epoch_info:38 - Epoch info - Current: 745, Slot Index: 24163, Slots in Epoch: 432000
+2025-02-20 00:54:36.635 | INFO     | modules.version:get_version:39 - RPC node version: 2.1.13
+2025-02-20 00:54:36.732 | INFO     | modules.websocket_monitor:check_websocket_health:35 - WebSocket connection healthy - Latency: 398.50ms
+2025-02-20 00:54:36.848 | DEBUG    | modules.websocket_monitor:check_websocket_health:46 - Successfully unsubscribed from slot updates
+2025-02-20 00:54:36.857 | INFO     | modules.epoch_monitor:get_epoch_info:53 - Highest processed slot: 321855118
+2025-02-20 00:54:36.859 | DEBUG    | modules.slot_monitor:get_slot_info:73 - Local RPC slot: 321864163
+2025-02-20 00:54:36.861 | INFO     | modules.tx_monitor:get_transaction_stats:41 - Processed 244212 transactions, Success rate: 100.00%, Error rate: 0.00%
+2025-02-20 00:54:36.866 | DEBUG    | modules.tx_monitor:get_transaction_stats:56 - Transaction latency - Avg: 0.00ms, P90: 0.00ms
+2025-02-20 00:54:36.868 | INFO     | modules.tx_monitor:get_transaction_types:101 - Transaction type distribution: {'success': 61, 'error': 39}
+2025-02-20 00:54:36.935 | DEBUG    | modules.slot_monitor:get_block_heights:123 - Network block height: 300134034
+2025-02-20 00:54:36.936 | INFO     | modules.slot_monitor:get_block_heights:135 - Block height difference: 0
+2025-02-20 00:54:37.092 | DEBUG    | modules.slot_monitor:get_slot_info:80 - Network RPC slot: 321864164
+2025-02-20 00:54:37.093 | INFO     | modules.slot_monitor:get_slot_info:92 - Slot difference: -1
+2025-02-20 00:54:37.315 | DEBUG    | modules.slot_monitor:get_shred_slots:43 - Local max shred insert slot: 321864197
+2025-02-20 00:54:37.316 | DEBUG    | modules.slot_monitor:get_shred_slots:53 - Local max retransmit slot: 321864198
+2025-02-20 00:54:37.462 | DEBUG    | modules.slot_monitor:get_shred_slots:40 - Network max shred insert slot: 321864198
+2025-02-20 00:54:37.462 | DEBUG    | modules.slot_monitor:get_shred_slots:50 - Network max retransmit slot: 321864198
+2025-02-20 00:54:37.957 | INFO     | exporter.collector:collect:42 - Metrics collection completed in 1.62 seconds
+2025-02-20 00:54:37.958 | INFO     | exporter.exporter:run_exporter:40 - Metrics collected successfully in 1.63 seconds
+2025-02-20 00:54:37.958 | INFO     | exporter.exporter:run_exporter:44 - Sleeping for 30 seconds
+2025-02-20 00:55:07.959 | INFO     | exporter.exporter:run_exporter:37 - Starting collection of metrics
+2025-02-20 00:55:07.960 | INFO     | exporter.collector:collect:36 - Starting metrics collection
+2025-02-20 00:55:08.254 | INFO     | modules.tx_monitor:get_transaction_stats:41 - Processed 245234 transactions, Success rate: 100.00%, Error rate: 0.00%
+2025-02-20 00:55:08.255 | DEBUG    | modules.tx_monitor:get_transaction_stats:56 - Transaction latency - Avg: 0.00ms, P90: 0.00ms
+2025-02-20 00:55:08.256 | INFO     | modules.epoch_monitor:get_epoch_info:38 - Epoch info - Current: 745, Slot Index: 24242, Slots in Epoch: 432000
+2025-02-20 00:55:08.258 | INFO     | modules.websocket_monitor:check_websocket_health:22 - Successfully connected to WebSocket endpoint: ws://localhost:8800
+2025-02-20 00:55:08.363 | INFO     | modules.websocket_monitor:check_websocket_health:35 - WebSocket connection healthy - Latency: 401.12ms
+2025-02-20 00:55:08.373 | DEBUG    | modules.slot_monitor:get_slot_info:73 - Local RPC slot: 321864243
+2025-02-20 00:55:08.375 | INFO     | modules.epoch_monitor:get_epoch_info:53 - Highest processed slot: 321855118
+2025-02-20 00:55:08.375 | DEBUG    | modules.slot_monitor:get_block_heights:116 - Local RPC block height: 300134114
+2025-02-20 00:55:08.377 | INFO     | modules.node_health:get_health:33 - RPC node is healthy
+2025-02-20 00:55:08.379 | INFO     | modules.tx_monitor:get_transaction_types:101 - Transaction type distribution: {'success': 92, 'error': 8}
+2025-02-20 00:55:08.386 | INFO     | modules.version:get_version:39 - RPC node version: 2.1.13
+2025-02-20 00:55:08.480 | DEBUG    | modules.websocket_monitor:check_websocket_health:46 - Successfully unsubscribed from slot updates
+2025-02-20 00:55:08.616 | DEBUG    | modules.slot_monitor:get_slot_info:80 - Network RPC slot: 321864243
+2025-02-20 00:55:08.618 | INFO     | modules.slot_monitor:get_slot_info:92 - Slot difference: 0
+2025-02-20 00:55:08.623 | DEBUG    | modules.slot_monitor:get_block_heights:123 - Network block height: 300134114
+2025-02-20 00:55:08.624 | INFO     | modules.slot_monitor:get_block_heights:135 - Block height difference: 0
+2025-02-20 00:55:08.839 | DEBUG    | modules.slot_monitor:get_shred_slots:43 - Local max shred insert slot: 321864277
+2025-02-20 00:55:08.840 | DEBUG    | modules.slot_monitor:get_shred_slots:53 - Local max retransmit slot: 321864277
+2025-02-20 00:55:09.035 | DEBUG    | modules.slot_monitor:get_shred_slots:40 - Network max shred insert slot: 321864277
+2025-02-20 00:55:09.035 | DEBUG    | modules.slot_monitor:get_shred_slots:50 - Network max retransmit slot: 321864278
+2025-02-20 00:55:09.593 | INFO     | exporter.collector:collect:42 - Metrics collection completed in 1.63 seconds
+2025-02-20 00:55:09.594 | INFO     | exporter.exporter:run_exporter:40 - Metrics collected successfully in 1.63 seconds
+2025-02-20 00:55:09.594 | INFO     | exporter.exporter:run_exporter:44 - Sleeping for 30 seconds
+2025-02-20 00:55:39.596 | INFO     | exporter.exporter:run_exporter:37 - Starting collection of metrics
+2025-02-20 00:55:39.597 | INFO     | exporter.collector:collect:36 - Starting metrics collection
+2025-02-20 00:55:39.884 | INFO     | modules.epoch_monitor:get_epoch_info:38 - Epoch info - Current: 745, Slot Index: 24323, Slots in Epoch: 432000
+2025-02-20 00:55:39.890 | INFO     | modules.tx_monitor:get_transaction_stats:41 - Processed 245234 transactions, Success rate: 100.00%, Error rate: 0.00%
+2025-02-20 00:55:39.891 | DEBUG    | modules.tx_monitor:get_transaction_stats:56 - Transaction latency - Avg: 0.00ms, P90: 0.00ms
+2025-02-20 00:55:39.892 | DEBUG    | modules.slot_monitor:get_slot_info:73 - Local RPC slot: 321864323
+2025-02-20 00:55:39.893 | INFO     | modules.node_health:get_health:33 - RPC node is healthy
+2025-02-20 00:55:39.895 | INFO     | modules.websocket_monitor:check_websocket_health:22 - Successfully connected to WebSocket endpoint: ws://localhost:8800
+2025-02-20 00:55:39.947 | DEBUG    | modules.slot_monitor:get_block_heights:116 - Local RPC block height: 300134194
+2025-02-20 00:55:39.955 | INFO     | modules.version:get_version:39 - RPC node version: 2.1.13
+2025-02-20 00:55:39.998 | INFO     | modules.epoch_monitor:get_epoch_info:53 - Highest processed slot: 321855118
+2025-02-20 00:55:40.004 | INFO     | modules.websocket_monitor:check_websocket_health:35 - WebSocket connection healthy - Latency: 404.01ms
+2025-02-20 00:55:40.027 | DEBUG    | modules.websocket_monitor:check_websocket_health:46 - Successfully unsubscribed from slot updates
+2025-02-20 00:55:40.036 | INFO     | modules.tx_monitor:get_transaction_types:101 - Transaction type distribution: {'success': 81, 'error': 19}
+2025-02-20 00:55:40.213 | DEBUG    | modules.slot_monitor:get_block_heights:123 - Network block height: 300134195
+2025-02-20 00:55:40.214 | INFO     | modules.slot_monitor:get_block_heights:135 - Block height difference: -1
+2025-02-20 00:55:40.219 | DEBUG    | modules.slot_monitor:get_slot_info:80 - Network RPC slot: 321864324
+2025-02-20 00:55:40.220 | INFO     | modules.slot_monitor:get_slot_info:92 - Slot difference: -1
+2025-02-20 00:55:40.437 | DEBUG    | modules.slot_monitor:get_shred_slots:43 - Local max shred insert slot: 321864357
+2025-02-20 00:55:40.438 | DEBUG    | modules.slot_monitor:get_shred_slots:53 - Local max retransmit slot: 321864358
+2025-02-20 00:55:40.634 | DEBUG    | modules.slot_monitor:get_shred_slots:40 - Network max shred insert slot: 321864358
+2025-02-20 00:55:40.634 | DEBUG    | modules.slot_monitor:get_shred_slots:50 - Network max retransmit slot: 321864358
+2025-02-20 00:55:41.141 | INFO     | exporter.collector:collect:42 - Metrics collection completed in 1.54 seconds
+2025-02-20 00:55:41.142 | INFO     | exporter.exporter:run_exporter:40 - Metrics collected successfully in 1.55 seconds
+2025-02-20 00:55:41.142 | INFO     | exporter.exporter:run_exporter:44 - Sleeping for 30 seconds
+2025-02-20 00:56:11.144 | INFO     | exporter.exporter:run_exporter:37 - Starting collection of metrics
+2025-02-20 00:56:11.145 | INFO     | exporter.collector:collect:36 - Starting metrics collection
+2025-02-20 00:56:11.433 | DEBUG    | modules.slot_monitor:get_block_heights:116 - Local RPC block height: 300134273
+2025-02-20 00:56:11.436 | INFO     | modules.websocket_monitor:check_websocket_health:22 - Successfully connected to WebSocket endpoint: ws://localhost:8800
+2025-02-20 00:56:11.521 | DEBUG    | modules.slot_monitor:get_slot_info:73 - Local RPC slot: 321864402
+2025-02-20 00:56:11.523 | INFO     | modules.epoch_monitor:get_epoch_info:38 - Epoch info - Current: 745, Slot Index: 24402, Slots in Epoch: 432000
+2025-02-20 00:56:11.524 | INFO     | modules.tx_monitor:get_transaction_stats:41 - Processed 255939 transactions, Success rate: 100.00%, Error rate: 0.00%
+2025-02-20 00:56:11.525 | DEBUG    | modules.tx_monitor:get_transaction_stats:56 - Transaction latency - Avg: 0.00ms, P90: 0.00ms
+2025-02-20 00:56:11.525 | INFO     | modules.tx_monitor:get_transaction_types:101 - Transaction type distribution: {'error': 19, 'success': 80, 'memo': 1}
+2025-02-20 00:56:11.545 | INFO     | modules.websocket_monitor:check_websocket_health:35 - WebSocket connection healthy - Latency: 397.30ms
+2025-02-20 00:56:11.568 | INFO     | modules.node_health:get_health:33 - RPC node is healthy
+2025-02-20 00:56:11.572 | INFO     | modules.version:get_version:39 - RPC node version: 2.1.13
+2025-02-20 00:56:11.607 | DEBUG    | modules.websocket_monitor:check_websocket_health:46 - Successfully unsubscribed from slot updates
+2025-02-20 00:56:11.630 | INFO     | modules.epoch_monitor:get_epoch_info:53 - Highest processed slot: 321855118
+2025-02-20 00:56:11.699 | DEBUG    | modules.slot_monitor:get_block_heights:123 - Network block height: 300134275
+2025-02-20 00:56:11.700 | INFO     | modules.slot_monitor:get_block_heights:135 - Block height difference: -2
+2025-02-20 00:56:11.786 | DEBUG    | modules.slot_monitor:get_slot_info:80 - Network RPC slot: 321864404
+2025-02-20 00:56:11.788 | INFO     | modules.slot_monitor:get_slot_info:92 - Slot difference: -2
+2025-02-20 00:56:12.003 | DEBUG    | modules.slot_monitor:get_shred_slots:43 - Local max shred insert slot: 321864437
+2025-02-20 00:56:12.004 | DEBUG    | modules.slot_monitor:get_shred_slots:53 - Local max retransmit slot: 321864438
+2025-02-20 00:56:12.171 | DEBUG    | modules.slot_monitor:get_shred_slots:40 - Network max shred insert slot: 321864438
+2025-02-20 00:56:12.172 | DEBUG    | modules.slot_monitor:get_shred_slots:50 - Network max retransmit slot: 321864438
+2025-02-20 00:56:12.715 | INFO     | exporter.collector:collect:42 - Metrics collection completed in 1.57 seconds
+2025-02-20 00:56:12.716 | INFO     | exporter.exporter:run_exporter:40 - Metrics collected successfully in 1.57 seconds
+2025-02-20 00:56:12.717 | INFO     | exporter.exporter:run_exporter:44 - Sleeping for 30 seconds
+2025-02-20 00:56:33.886 | INFO     | exporter.exporter:graceful_shutdown:13 - Received exit signal SIGINT...
+2025-02-20 00:56:33.887 | INFO     | exporter.exporter:graceful_shutdown:16 - Cancelling 1 outstanding tasks
+2025-02-20 00:56:33.888 | INFO     | exporter.exporter:main:66 - Shutting down RPC monitor
