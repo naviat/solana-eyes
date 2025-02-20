@@ -1,0 +1,395 @@
+2025-02-20 00:19:08.620 | INFO     | exporter.exporter:run_exporter:32 - Starting Prometheus metrics server on localhost:9090/metrics
+2025-02-20 00:19:08.635 | INFO     | exporter.exporter:run_exporter:37 - Starting collection of metrics
+2025-02-20 00:19:08.635 | INFO     | exporter.collector:collect:34 - Starting metrics collection
+2025-02-20 00:19:08.932 | INFO     | modules.version:get_version:39 - RPC node version: 2.1.13
+2025-02-20 00:19:09.006 | INFO     | modules.node_health:get_health:25 - RPC node is healthy
+2025-02-20 00:19:09.007 | ERROR    | modules.node_health:get_rpc_cache_info:63 - Error fetching cache info: Session is closed
+2025-02-20 00:19:09.008 | ERROR    | modules.node_health:get_websocket_info:79 - Error fetching WebSocket info: Session is closed
+2025-02-20 00:19:09.009 | DEBUG    | modules.tx_monitor:get_transaction_stats:54 - Processed 245440 transactions with 0 errors
+2025-02-20 00:19:09.011 | DEBUG    | modules.tx_monitor:get_transaction_types:94 - Transaction types distribution: {'error': 100}
+2025-02-20 00:19:09.632 | DEBUG    | modules.slot_monitor:get_slot_info:47 - Slot difference: -3327016
+2025-02-20 00:19:09.634 | DEBUG    | modules.slot_monitor:get_block_heights:79 - Block height difference: -23367631
+2025-02-20 00:19:09.635 | INFO     | exporter.collector:collect:40 - Metrics collection completed in 1.00 seconds
+2025-02-20 00:19:09.635 | INFO     | exporter.exporter:run_exporter:40 - Metrics collected successfully in 1.00 seconds
+2025-02-20 00:19:09.636 | INFO     | exporter.exporter:run_exporter:44 - Sleeping for 45 seconds
+2025-02-20 00:19:54.637 | INFO     | exporter.exporter:run_exporter:37 - Starting collection of metrics
+2025-02-20 00:19:54.638 | INFO     | exporter.collector:collect:34 - Starting metrics collection
+2025-02-20 00:19:54.934 | INFO     | modules.node_health:get_health:25 - RPC node is healthy
+2025-02-20 00:19:54.935 | ERROR    | modules.node_health:get_rpc_cache_info:63 - Error fetching cache info: Session is closed
+2025-02-20 00:19:54.936 | ERROR    | modules.node_health:get_websocket_info:79 - Error fetching WebSocket info: Session is closed
+2025-02-20 00:19:54.937 | DEBUG    | modules.tx_monitor:get_transaction_stats:54 - Processed 245440 transactions with 0 errors
+2025-02-20 00:19:54.945 | INFO     | modules.version:get_version:39 - RPC node version: 2.1.13
+2025-02-20 00:19:55.046 | DEBUG    | modules.tx_monitor:get_transaction_types:94 - Transaction types distribution: {'error': 100}
+2025-02-20 00:19:55.503 | DEBUG    | modules.slot_monitor:get_slot_info:47 - Slot difference: -3327049
+2025-02-20 00:19:55.510 | DEBUG    | modules.slot_monitor:get_block_heights:79 - Block height difference: -23367685
+2025-02-20 00:19:55.511 | INFO     | exporter.collector:collect:40 - Metrics collection completed in 0.87 seconds
+2025-02-20 00:19:55.512 | INFO     | exporter.exporter:run_exporter:40 - Metrics collected successfully in 0.88 seconds
+2025-02-20 00:19:55.512 | INFO     | exporter.exporter:run_exporter:44 - Sleeping for 45 seconds
+2025-02-20 00:20:40.514 | INFO     | exporter.exporter:run_exporter:37 - Starting collection of metrics
+2025-02-20 00:20:40.515 | INFO     | exporter.collector:collect:34 - Starting metrics collection
+2025-02-20 00:20:40.883 | DEBUG    | modules.tx_monitor:get_transaction_types:94 - Transaction types distribution: {'error': 100}
+2025-02-20 00:20:40.885 | INFO     | modules.node_health:get_health:25 - RPC node is healthy
+2025-02-20 00:20:40.885 | ERROR    | modules.node_health:get_rpc_cache_info:63 - Error fetching cache info: Session is closed
+2025-02-20 00:20:40.886 | ERROR    | modules.node_health:get_websocket_info:79 - Error fetching WebSocket info: Session is closed
+2025-02-20 00:20:40.887 | DEBUG    | modules.tx_monitor:get_transaction_stats:54 - Processed 245490 transactions with 0 errors
+2025-02-20 00:20:40.891 | INFO     | modules.version:get_version:39 - RPC node version: 2.1.13
+2025-02-20 00:20:41.251 | DEBUG    | modules.slot_monitor:get_block_heights:79 - Block height difference: -23367720
+2025-02-20 00:20:41.253 | DEBUG    | modules.slot_monitor:get_slot_info:47 - Slot difference: -3327081
+2025-02-20 00:20:41.254 | INFO     | exporter.collector:collect:40 - Metrics collection completed in 0.74 seconds
+2025-02-20 00:20:41.254 | INFO     | exporter.exporter:run_exporter:40 - Metrics collected successfully in 0.74 seconds
+2025-02-20 00:20:41.255 | INFO     | exporter.exporter:run_exporter:44 - Sleeping for 45 seconds
+2025-02-20 00:20:57.603 | INFO     | exporter.exporter:graceful_shutdown:13 - Received exit signal SIGINT...
+2025-02-20 00:20:57.604 | INFO     | exporter.exporter:graceful_shutdown:16 - Cancelling 1 outstanding tasks
+2025-02-20 00:20:57.606 | INFO     | exporter.exporter:main:66 - Shutting down RPC monitor
+2025-02-20 00:21:31.776 | INFO     | exporter.exporter:run_exporter:32 - Starting Prometheus metrics server on localhost:9090/metrics
+2025-02-20 00:21:31.783 | INFO     | exporter.exporter:run_exporter:37 - Starting collection of metrics
+2025-02-20 00:21:31.783 | INFO     | exporter.collector:collect:34 - Starting metrics collection
+2025-02-20 00:21:32.071 | INFO     | modules.node_health:get_health:24 - RPC node is healthy
+2025-02-20 00:21:32.076 | INFO     | modules.tx_monitor:get_transaction_stats:41 - Processed 258589 transactions, Success rate: 100.00%, Error rate: 0.00%
+2025-02-20 00:21:32.076 | DEBUG    | modules.tx_monitor:get_transaction_stats:56 - Transaction latency - Avg: 0.00ms, P90: 0.00ms
+2025-02-20 00:21:32.083 | INFO     | modules.version:get_version:39 - RPC node version: 2.1.13
+2025-02-20 00:21:32.348 | INFO     | modules.tx_monitor:get_transaction_types:101 - Transaction type distribution: {'success': 81, 'error': 19}
+2025-02-20 00:21:32.691 | DEBUG    | modules.slot_monitor:get_block_heights:79 - Block height difference: -23367775
+2025-02-20 00:21:32.871 | DEBUG    | modules.slot_monitor:get_slot_info:47 - Slot difference: -3327126
+2025-02-20 00:21:32.873 | INFO     | exporter.collector:collect:40 - Metrics collection completed in 1.09 seconds
+2025-02-20 00:21:32.873 | INFO     | exporter.exporter:run_exporter:40 - Metrics collected successfully in 1.09 seconds
+2025-02-20 00:21:32.874 | INFO     | exporter.exporter:run_exporter:44 - Sleeping for 45 seconds
+2025-02-20 00:22:17.876 | INFO     | exporter.exporter:run_exporter:37 - Starting collection of metrics
+2025-02-20 00:22:17.877 | INFO     | exporter.collector:collect:34 - Starting metrics collection
+2025-02-20 00:22:18.170 | INFO     | modules.node_health:get_health:24 - RPC node is healthy
+2025-02-20 00:22:18.172 | INFO     | modules.tx_monitor:get_transaction_stats:41 - Processed 254178 transactions, Success rate: 100.00%, Error rate: 0.00%
+2025-02-20 00:22:18.173 | DEBUG    | modules.tx_monitor:get_transaction_stats:56 - Transaction latency - Avg: 0.00ms, P90: 0.00ms
+2025-02-20 00:22:18.285 | INFO     | modules.tx_monitor:get_transaction_types:101 - Transaction type distribution: {'success': 82, 'error': 18}
+2025-02-20 00:22:18.290 | INFO     | modules.version:get_version:39 - RPC node version: 2.1.13
+2025-02-20 00:22:18.737 | DEBUG    | modules.slot_monitor:get_slot_info:47 - Slot difference: -3327150
+2025-02-20 00:22:18.740 | DEBUG    | modules.slot_monitor:get_block_heights:79 - Block height difference: -23367824
+2025-02-20 00:22:18.741 | INFO     | exporter.collector:collect:40 - Metrics collection completed in 0.86 seconds
+2025-02-20 00:22:18.741 | INFO     | exporter.exporter:run_exporter:40 - Metrics collected successfully in 0.87 seconds
+2025-02-20 00:22:18.742 | INFO     | exporter.exporter:run_exporter:44 - Sleeping for 45 seconds
+2025-02-20 00:23:03.744 | INFO     | exporter.exporter:run_exporter:37 - Starting collection of metrics
+2025-02-20 00:23:03.745 | INFO     | exporter.collector:collect:34 - Starting metrics collection
+2025-02-20 00:23:04.040 | INFO     | modules.tx_monitor:get_transaction_stats:41 - Processed 255326 transactions, Success rate: 100.00%, Error rate: 0.00%
+2025-02-20 00:23:04.041 | DEBUG    | modules.tx_monitor:get_transaction_stats:56 - Transaction latency - Avg: 0.00ms, P90: 0.00ms
+2025-02-20 00:23:04.043 | INFO     | modules.node_health:get_health:24 - RPC node is healthy
+2025-02-20 00:23:04.080 | INFO     | modules.version:get_version:39 - RPC node version: 2.1.13
+2025-02-20 00:23:04.150 | INFO     | modules.tx_monitor:get_transaction_types:101 - Transaction type distribution: {'success': 90, 'error': 9, 'memo': 1}
+2025-02-20 00:23:04.760 | DEBUG    | modules.slot_monitor:get_block_heights:79 - Block height difference: -23367867
+2025-02-20 00:23:04.807 | DEBUG    | modules.slot_monitor:get_slot_info:47 - Slot difference: -3327192
+2025-02-20 00:23:04.807 | INFO     | exporter.collector:collect:40 - Metrics collection completed in 1.06 seconds
+2025-02-20 00:23:04.807 | INFO     | exporter.exporter:run_exporter:40 - Metrics collected successfully in 1.06 seconds
+2025-02-20 00:23:04.807 | INFO     | exporter.exporter:run_exporter:44 - Sleeping for 45 seconds
+2025-02-20 00:23:49.808 | INFO     | exporter.exporter:run_exporter:37 - Starting collection of metrics
+2025-02-20 00:23:49.809 | INFO     | exporter.collector:collect:34 - Starting metrics collection
+2025-02-20 00:23:50.098 | INFO     | modules.node_health:get_health:24 - RPC node is healthy
+2025-02-20 00:23:50.108 | INFO     | modules.version:get_version:39 - RPC node version: 2.1.13
+2025-02-20 00:23:50.152 | INFO     | modules.tx_monitor:get_transaction_stats:41 - Processed 255326 transactions, Success rate: 100.00%, Error rate: 0.00%
+2025-02-20 00:23:50.153 | DEBUG    | modules.tx_monitor:get_transaction_stats:56 - Transaction latency - Avg: 0.00ms, P90: 0.00ms
+2025-02-20 00:23:50.154 | INFO     | modules.tx_monitor:get_transaction_types:101 - Transaction type distribution: {'success': 88, 'error': 12}
+2025-02-20 00:23:50.989 | DEBUG    | modules.slot_monitor:get_block_heights:79 - Block height difference: -23367894
+2025-02-20 00:23:51.059 | DEBUG    | modules.slot_monitor:get_slot_info:47 - Slot difference: -3327209
+2025-02-20 00:23:51.060 | INFO     | exporter.collector:collect:40 - Metrics collection completed in 1.25 seconds
+2025-02-20 00:23:51.060 | INFO     | exporter.exporter:run_exporter:40 - Metrics collected successfully in 1.25 seconds
+2025-02-20 00:23:51.061 | INFO     | exporter.exporter:run_exporter:44 - Sleeping for 45 seconds
+2025-02-20 00:24:36.062 | INFO     | exporter.exporter:run_exporter:37 - Starting collection of metrics
+2025-02-20 00:24:36.063 | INFO     | exporter.collector:collect:34 - Starting metrics collection
+2025-02-20 00:24:36.354 | INFO     | modules.node_health:get_health:24 - RPC node is healthy
+2025-02-20 00:24:36.668 | DEBUG    | modules.slot_monitor:get_slot_info:47 - Slot difference: -3327256
+2025-02-20 00:24:36.766 | INFO     | modules.version:get_version:39 - RPC node version: 2.1.13
+2025-02-20 00:24:36.803 | INFO     | modules.tx_monitor:get_transaction_stats:41 - Processed 248781 transactions, Success rate: 100.00%, Error rate: 0.00%
+2025-02-20 00:24:36.803 | DEBUG    | modules.tx_monitor:get_transaction_stats:56 - Transaction latency - Avg: 0.00ms, P90: 0.00ms
+2025-02-20 00:24:36.804 | INFO     | modules.tx_monitor:get_transaction_types:101 - Transaction type distribution: {'error': 23, 'success': 77}
+2025-02-20 00:24:37.098 | DEBUG    | modules.slot_monitor:get_block_heights:79 - Block height difference: -23367942
+2025-02-20 00:24:37.099 | INFO     | exporter.collector:collect:40 - Metrics collection completed in 1.04 seconds
+2025-02-20 00:24:37.099 | INFO     | exporter.exporter:run_exporter:40 - Metrics collected successfully in 1.04 seconds
+2025-02-20 00:24:37.099 | INFO     | exporter.exporter:run_exporter:44 - Sleeping for 45 seconds
+2025-02-20 00:25:22.100 | INFO     | exporter.exporter:run_exporter:37 - Starting collection of metrics
+2025-02-20 00:25:22.101 | INFO     | exporter.collector:collect:34 - Starting metrics collection
+2025-02-20 00:25:22.513 | INFO     | modules.tx_monitor:get_transaction_stats:41 - Processed 252403 transactions, Success rate: 100.00%, Error rate: 0.00%
+2025-02-20 00:25:22.514 | DEBUG    | modules.tx_monitor:get_transaction_stats:56 - Transaction latency - Avg: 0.00ms, P90: 0.00ms
+2025-02-20 00:25:22.515 | INFO     | modules.node_health:get_health:24 - RPC node is healthy
+2025-02-20 00:25:22.528 | INFO     | modules.version:get_version:39 - RPC node version: 2.1.13
+2025-02-20 00:25:22.884 | INFO     | modules.tx_monitor:get_transaction_types:101 - Transaction type distribution: {'success': 85, 'error': 15}
+2025-02-20 00:25:23.146 | DEBUG    | modules.slot_monitor:get_block_heights:79 - Block height difference: -23367985
+2025-02-20 00:25:23.148 | DEBUG    | modules.slot_monitor:get_slot_info:47 - Slot difference: -3327286
+2025-02-20 00:25:23.148 | INFO     | exporter.collector:collect:40 - Metrics collection completed in 1.05 seconds
+2025-02-20 00:25:23.149 | INFO     | exporter.exporter:run_exporter:40 - Metrics collected successfully in 1.05 seconds
+2025-02-20 00:25:23.149 | INFO     | exporter.exporter:run_exporter:44 - Sleeping for 45 seconds
+2025-02-20 00:26:08.150 | INFO     | exporter.exporter:run_exporter:37 - Starting collection of metrics
+2025-02-20 00:26:08.152 | INFO     | exporter.collector:collect:34 - Starting metrics collection
+2025-02-20 00:26:08.506 | INFO     | modules.node_health:get_health:24 - RPC node is healthy
+2025-02-20 00:26:08.508 | INFO     | modules.tx_monitor:get_transaction_stats:41 - Processed 245184 transactions, Success rate: 100.00%, Error rate: 0.00%
+2025-02-20 00:26:08.509 | DEBUG    | modules.tx_monitor:get_transaction_stats:56 - Transaction latency - Avg: 0.00ms, P90: 0.00ms
+2025-02-20 00:26:08.509 | INFO     | modules.tx_monitor:get_transaction_types:101 - Transaction type distribution: {'success': 71, 'error': 29}
+2025-02-20 00:26:08.513 | INFO     | modules.version:get_version:39 - RPC node version: 2.1.13
+2025-02-20 00:26:09.227 | DEBUG    | modules.slot_monitor:get_block_heights:79 - Block height difference: -23368019
+2025-02-20 00:26:09.228 | DEBUG    | modules.slot_monitor:get_slot_info:47 - Slot difference: -3327299
+2025-02-20 00:26:09.228 | INFO     | exporter.collector:collect:40 - Metrics collection completed in 1.08 seconds
+2025-02-20 00:26:09.229 | INFO     | exporter.exporter:run_exporter:40 - Metrics collected successfully in 1.08 seconds
+2025-02-20 00:26:09.229 | INFO     | exporter.exporter:run_exporter:44 - Sleeping for 45 seconds
+2025-02-20 00:26:44.608 | INFO     | exporter.exporter:graceful_shutdown:13 - Received exit signal SIGINT...
+2025-02-20 00:26:44.609 | INFO     | exporter.exporter:graceful_shutdown:16 - Cancelling 1 outstanding tasks
+2025-02-20 00:26:44.610 | INFO     | exporter.exporter:main:66 - Shutting down RPC monitor
+2025-02-20 00:28:45.425 | INFO     | exporter.exporter:run_exporter:32 - Starting Prometheus metrics server on localhost:9090/metrics
+2025-02-20 00:28:45.430 | INFO     | exporter.exporter:run_exporter:37 - Starting collection of metrics
+2025-02-20 00:28:45.430 | INFO     | exporter.collector:collect:35 - Starting metrics collection
+2025-02-20 00:28:45.431 | ERROR    | exporter.exporter:run_exporter:42 - Error during metrics collection: name 'check_websocket_health' is not defined
+2025-02-20 00:28:45.431 | INFO     | exporter.exporter:run_exporter:44 - Sleeping for 45 seconds
+2025-02-20 00:28:48.489 | INFO     | exporter.exporter:graceful_shutdown:13 - Received exit signal SIGINT...
+2025-02-20 00:28:48.490 | INFO     | exporter.exporter:graceful_shutdown:16 - Cancelling 1 outstanding tasks
+2025-02-20 00:28:48.491 | INFO     | exporter.exporter:main:66 - Shutting down RPC monitor
+2025-02-20 00:29:48.549 | INFO     | exporter.exporter:run_exporter:32 - Starting Prometheus metrics server on localhost:9090/metrics
+2025-02-20 00:29:48.553 | INFO     | exporter.exporter:run_exporter:37 - Starting collection of metrics
+2025-02-20 00:29:48.553 | INFO     | exporter.collector:collect:35 - Starting metrics collection
+2025-02-20 00:29:48.555 | ERROR    | exporter.exporter:run_exporter:42 - Error during metrics collection: name 'check_websocket_health' is not defined
+2025-02-20 00:29:48.555 | INFO     | exporter.exporter:run_exporter:44 - Sleeping for 45 seconds
+2025-02-20 00:29:49.873 | INFO     | exporter.exporter:graceful_shutdown:13 - Received exit signal SIGINT...
+2025-02-20 00:29:49.874 | INFO     | exporter.exporter:graceful_shutdown:16 - Cancelling 1 outstanding tasks
+2025-02-20 00:29:49.875 | INFO     | exporter.exporter:main:66 - Shutting down RPC monitor
+2025-02-20 00:30:23.668 | INFO     | exporter.exporter:run_exporter:32 - Starting Prometheus metrics server on localhost:9090/metrics
+2025-02-20 00:30:23.673 | INFO     | exporter.exporter:run_exporter:37 - Starting collection of metrics
+2025-02-20 00:30:23.673 | INFO     | exporter.collector:collect:34 - Starting metrics collection
+2025-02-20 00:30:24.413 | INFO     | modules.node_health:get_health:24 - RPC node is healthy
+2025-02-20 00:30:24.417 | ERROR    | modules.websocket_monitor:check_websocket_health:55 - WebSocket connection failed: server rejected WebSocket connection: HTTP 405
+2025-02-20 00:30:24.418 | INFO     | modules.tx_monitor:get_transaction_stats:41 - Processed 266466 transactions, Success rate: 100.00%, Error rate: 0.00%
+2025-02-20 00:30:24.418 | DEBUG    | modules.tx_monitor:get_transaction_stats:56 - Transaction latency - Avg: 0.00ms, P90: 0.00ms
+2025-02-20 00:30:24.420 | INFO     | modules.tx_monitor:get_transaction_types:101 - Transaction type distribution: {'success': 96, 'memo': 1, 'error': 3}
+2025-02-20 00:30:24.426 | INFO     | modules.version:get_version:39 - RPC node version: 2.1.13
+2025-02-20 00:30:25.028 | DEBUG    | modules.slot_monitor:get_block_heights:79 - Block height difference: -23368266
+2025-02-20 00:30:25.029 | DEBUG    | modules.slot_monitor:get_slot_info:47 - Slot difference: -3327474
+2025-02-20 00:30:25.029 | INFO     | exporter.collector:collect:40 - Metrics collection completed in 1.36 seconds
+2025-02-20 00:30:25.030 | INFO     | exporter.exporter:run_exporter:40 - Metrics collected successfully in 1.36 seconds
+2025-02-20 00:30:25.030 | INFO     | exporter.exporter:run_exporter:44 - Sleeping for 45 seconds
+2025-02-20 00:31:10.031 | INFO     | exporter.exporter:run_exporter:37 - Starting collection of metrics
+2025-02-20 00:31:10.032 | INFO     | exporter.collector:collect:34 - Starting metrics collection
+2025-02-20 00:31:10.391 | INFO     | modules.tx_monitor:get_transaction_stats:41 - Processed 264539 transactions, Success rate: 100.00%, Error rate: 0.00%
+2025-02-20 00:31:10.392 | DEBUG    | modules.tx_monitor:get_transaction_stats:56 - Transaction latency - Avg: 0.00ms, P90: 0.00ms
+2025-02-20 00:31:10.393 | INFO     | modules.tx_monitor:get_transaction_types:101 - Transaction type distribution: {'success': 93, 'error': 6, 'memo': 1}
+2025-02-20 00:31:10.394 | INFO     | modules.node_health:get_health:24 - RPC node is healthy
+2025-02-20 00:31:10.396 | ERROR    | modules.websocket_monitor:check_websocket_health:55 - WebSocket connection failed: server rejected WebSocket connection: HTTP 405
+2025-02-20 00:31:10.399 | INFO     | modules.version:get_version:39 - RPC node version: 2.1.13
+2025-02-20 00:31:11.120 | DEBUG    | modules.slot_monitor:get_slot_info:47 - Slot difference: -3327497
+2025-02-20 00:31:11.326 | DEBUG    | modules.slot_monitor:get_block_heights:79 - Block height difference: -23368296
+2025-02-20 00:31:11.327 | INFO     | exporter.collector:collect:40 - Metrics collection completed in 1.29 seconds
+2025-02-20 00:31:11.327 | INFO     | exporter.exporter:run_exporter:40 - Metrics collected successfully in 1.30 seconds
+2025-02-20 00:31:11.328 | INFO     | exporter.exporter:run_exporter:44 - Sleeping for 45 seconds
+2025-02-20 00:31:42.790 | INFO     | exporter.exporter:graceful_shutdown:13 - Received exit signal SIGINT...
+2025-02-20 00:31:42.791 | INFO     | exporter.exporter:graceful_shutdown:16 - Cancelling 1 outstanding tasks
+2025-02-20 00:31:42.792 | INFO     | exporter.exporter:main:66 - Shutting down RPC monitor
+2025-02-20 00:32:29.373 | INFO     | exporter.exporter:run_exporter:32 - Starting Prometheus metrics server on localhost:9090/metrics
+2025-02-20 00:32:29.380 | INFO     | exporter.exporter:run_exporter:37 - Starting collection of metrics
+2025-02-20 00:32:29.380 | INFO     | exporter.collector:collect:34 - Starting metrics collection
+2025-02-20 00:32:29.681 | INFO     | modules.websocket_monitor:check_websocket_health:22 - Successfully connected to WebSocket endpoint: ws://localhost:8800
+2025-02-20 00:32:29.684 | INFO     | modules.node_health:get_health:24 - RPC node is healthy
+2025-02-20 00:32:29.688 | INFO     | modules.tx_monitor:get_transaction_stats:41 - Processed 264743 transactions, Success rate: 100.00%, Error rate: 0.00%
+2025-02-20 00:32:29.690 | DEBUG    | modules.tx_monitor:get_transaction_stats:56 - Transaction latency - Avg: 0.00ms, P90: 0.00ms
+2025-02-20 00:32:29.694 | INFO     | modules.version:get_version:39 - RPC node version: 2.1.13
+2025-02-20 00:32:29.790 | INFO     | modules.websocket_monitor:check_websocket_health:35 - WebSocket connection healthy - Latency: 408.93ms
+2025-02-20 00:32:29.820 | DEBUG    | modules.websocket_monitor:check_websocket_health:46 - Successfully unsubscribed from slot updates
+2025-02-20 00:32:30.111 | INFO     | modules.tx_monitor:get_transaction_types:101 - Transaction type distribution: {'success': 91, 'error': 9}
+2025-02-20 00:32:30.293 | DEBUG    | modules.slot_monitor:get_slot_info:47 - Slot difference: -3327565
+2025-02-20 00:32:30.296 | DEBUG    | modules.slot_monitor:get_block_heights:79 - Block height difference: -23368382
+2025-02-20 00:32:30.929 | INFO     | exporter.collector:collect:40 - Metrics collection completed in 1.55 seconds
+2025-02-20 00:32:30.930 | INFO     | exporter.exporter:run_exporter:40 - Metrics collected successfully in 1.55 seconds
+2025-02-20 00:32:30.931 | INFO     | exporter.exporter:run_exporter:44 - Sleeping for 30 seconds
+2025-02-20 00:33:00.932 | INFO     | exporter.exporter:run_exporter:37 - Starting collection of metrics
+2025-02-20 00:33:00.934 | INFO     | exporter.collector:collect:34 - Starting metrics collection
+2025-02-20 00:33:01.226 | INFO     | modules.node_health:get_health:24 - RPC node is healthy
+2025-02-20 00:33:01.228 | INFO     | modules.websocket_monitor:check_websocket_health:22 - Successfully connected to WebSocket endpoint: ws://localhost:8800
+2025-02-20 00:33:01.229 | INFO     | modules.tx_monitor:get_transaction_stats:41 - Processed 264743 transactions, Success rate: 100.00%, Error rate: 0.00%
+2025-02-20 00:33:01.230 | DEBUG    | modules.tx_monitor:get_transaction_stats:56 - Transaction latency - Avg: 0.00ms, P90: 0.00ms
+2025-02-20 00:33:01.290 | INFO     | modules.version:get_version:39 - RPC node version: 2.1.13
+2025-02-20 00:33:01.339 | INFO     | modules.websocket_monitor:check_websocket_health:35 - WebSocket connection healthy - Latency: 402.89ms
+2025-02-20 00:33:01.451 | DEBUG    | modules.websocket_monitor:check_websocket_health:46 - Successfully unsubscribed from slot updates
+2025-02-20 00:33:01.639 | INFO     | modules.tx_monitor:get_transaction_types:101 - Transaction type distribution: {'success': 94, 'error': 6}
+2025-02-20 00:33:01.756 | DEBUG    | modules.slot_monitor:get_slot_info:47 - Slot difference: -3327579
+2025-02-20 00:33:01.759 | DEBUG    | modules.slot_monitor:get_block_heights:79 - Block height difference: -23368409
+2025-02-20 00:33:02.562 | INFO     | exporter.collector:collect:40 - Metrics collection completed in 1.63 seconds
+2025-02-20 00:33:02.563 | INFO     | exporter.exporter:run_exporter:40 - Metrics collected successfully in 1.63 seconds
+2025-02-20 00:33:02.564 | INFO     | exporter.exporter:run_exporter:44 - Sleeping for 30 seconds
+2025-02-20 00:33:32.500 | INFO     | exporter.exporter:graceful_shutdown:13 - Received exit signal SIGINT...
+2025-02-20 00:33:32.501 | INFO     | exporter.exporter:graceful_shutdown:16 - Cancelling 1 outstanding tasks
+2025-02-20 00:33:32.502 | INFO     | exporter.exporter:main:66 - Shutting down RPC monitor
+2025-02-20 00:33:40.056 | INFO     | exporter.exporter:run_exporter:32 - Starting Prometheus metrics server on localhost:9090/metrics
+2025-02-20 00:33:40.061 | INFO     | exporter.exporter:run_exporter:37 - Starting collection of metrics
+2025-02-20 00:33:40.061 | INFO     | exporter.collector:collect:34 - Starting metrics collection
+2025-02-20 00:33:40.358 | INFO     | modules.websocket_monitor:check_websocket_health:22 - Successfully connected to WebSocket endpoint: ws://localhost:8800
+2025-02-20 00:33:40.466 | INFO     | modules.websocket_monitor:check_websocket_health:35 - WebSocket connection healthy - Latency: 404.37ms
+2025-02-20 00:33:40.571 | INFO     | modules.node_health:get_health:24 - RPC node is healthy
+2025-02-20 00:33:40.572 | INFO     | modules.tx_monitor:get_transaction_stats:41 - Processed 255633 transactions, Success rate: 100.00%, Error rate: 0.00%
+2025-02-20 00:33:40.572 | DEBUG    | modules.tx_monitor:get_transaction_stats:56 - Transaction latency - Avg: 0.00ms, P90: 0.00ms
+2025-02-20 00:33:40.573 | INFO     | modules.tx_monitor:get_transaction_types:101 - Transaction type distribution: {'error': 16, 'success': 84}
+2025-02-20 00:33:40.574 | DEBUG    | modules.websocket_monitor:check_websocket_health:46 - Successfully unsubscribed from slot updates
+2025-02-20 00:33:40.577 | INFO     | modules.version:get_version:39 - RPC node version: 2.1.13
+2025-02-20 00:33:40.732 | DEBUG    | modules.slot_monitor:get_slot_info:47 - Slot difference: 2
+2025-02-20 00:33:40.827 | DEBUG    | modules.slot_monitor:get_block_heights:79 - Block height difference: 0
+2025-02-20 00:33:41.679 | INFO     | exporter.collector:collect:40 - Metrics collection completed in 1.62 seconds
+2025-02-20 00:33:41.680 | INFO     | exporter.exporter:run_exporter:40 - Metrics collected successfully in 1.62 seconds
+2025-02-20 00:33:41.681 | INFO     | exporter.exporter:run_exporter:44 - Sleeping for 30 seconds
+2025-02-20 00:34:11.682 | INFO     | exporter.exporter:run_exporter:37 - Starting collection of metrics
+2025-02-20 00:34:11.684 | INFO     | exporter.collector:collect:34 - Starting metrics collection
+2025-02-20 00:34:11.974 | INFO     | modules.websocket_monitor:check_websocket_health:22 - Successfully connected to WebSocket endpoint: ws://localhost:8800
+2025-02-20 00:34:11.990 | INFO     | modules.version:get_version:39 - RPC node version: 2.1.13
+2025-02-20 00:34:11.991 | INFO     | modules.tx_monitor:get_transaction_stats:41 - Processed 260314 transactions, Success rate: 100.00%, Error rate: 0.00%
+2025-02-20 00:34:11.992 | DEBUG    | modules.tx_monitor:get_transaction_stats:56 - Transaction latency - Avg: 0.00ms, P90: 0.00ms
+2025-02-20 00:34:11.997 | INFO     | modules.node_health:get_health:24 - RPC node is healthy
+2025-02-20 00:34:12.083 | INFO     | modules.websocket_monitor:check_websocket_health:35 - WebSocket connection healthy - Latency: 396.61ms
+2025-02-20 00:34:12.193 | DEBUG    | modules.websocket_monitor:check_websocket_health:46 - Successfully unsubscribed from slot updates
+2025-02-20 00:34:12.264 | DEBUG    | modules.slot_monitor:get_slot_info:47 - Slot difference: -2
+2025-02-20 00:34:12.293 | DEBUG    | modules.slot_monitor:get_block_heights:79 - Block height difference: 1
+2025-02-20 00:34:12.362 | INFO     | modules.tx_monitor:get_transaction_types:101 - Transaction type distribution: {'success': 85, 'error': 15}
+2025-02-20 00:34:13.320 | INFO     | exporter.collector:collect:40 - Metrics collection completed in 1.63 seconds
+2025-02-20 00:34:13.320 | INFO     | exporter.exporter:run_exporter:40 - Metrics collected successfully in 1.64 seconds
+2025-02-20 00:34:13.320 | INFO     | exporter.exporter:run_exporter:44 - Sleeping for 30 seconds
+2025-02-20 00:34:43.322 | INFO     | exporter.exporter:run_exporter:37 - Starting collection of metrics
+2025-02-20 00:34:43.323 | INFO     | exporter.collector:collect:34 - Starting metrics collection
+2025-02-20 00:34:43.615 | INFO     | modules.node_health:get_health:24 - RPC node is healthy
+2025-02-20 00:34:43.617 | INFO     | modules.websocket_monitor:check_websocket_health:22 - Successfully connected to WebSocket endpoint: ws://localhost:8800
+2025-02-20 00:34:43.651 | INFO     | modules.version:get_version:39 - RPC node version: 2.1.13
+2025-02-20 00:34:43.727 | INFO     | modules.websocket_monitor:check_websocket_health:35 - WebSocket connection healthy - Latency: 401.34ms
+2025-02-20 00:34:43.792 | INFO     | modules.tx_monitor:get_transaction_stats:41 - Processed 260314 transactions, Success rate: 100.00%, Error rate: 0.00%
+2025-02-20 00:34:43.793 | DEBUG    | modules.tx_monitor:get_transaction_stats:56 - Transaction latency - Avg: 0.00ms, P90: 0.00ms
+2025-02-20 00:34:43.796 | INFO     | modules.tx_monitor:get_transaction_types:101 - Transaction type distribution: {'success': 79, 'error': 20, 'memo': 1}
+2025-02-20 00:34:43.835 | DEBUG    | modules.websocket_monitor:check_websocket_health:46 - Successfully unsubscribed from slot updates
+2025-02-20 00:34:43.926 | DEBUG    | modules.slot_monitor:get_slot_info:47 - Slot difference: 1
+2025-02-20 00:34:43.929 | DEBUG    | modules.slot_monitor:get_block_heights:79 - Block height difference: 1
+2025-02-20 00:34:44.948 | INFO     | exporter.collector:collect:40 - Metrics collection completed in 1.62 seconds
+2025-02-20 00:34:44.949 | INFO     | exporter.exporter:run_exporter:40 - Metrics collected successfully in 1.63 seconds
+2025-02-20 00:34:44.950 | INFO     | exporter.exporter:run_exporter:44 - Sleeping for 30 seconds
+2025-02-20 00:35:14.951 | INFO     | exporter.exporter:run_exporter:37 - Starting collection of metrics
+2025-02-20 00:35:14.952 | INFO     | exporter.collector:collect:34 - Starting metrics collection
+2025-02-20 00:35:15.252 | INFO     | modules.tx_monitor:get_transaction_stats:41 - Processed 259518 transactions, Success rate: 100.00%, Error rate: 0.00%
+2025-02-20 00:35:15.253 | DEBUG    | modules.tx_monitor:get_transaction_stats:56 - Transaction latency - Avg: 0.00ms, P90: 0.00ms
+2025-02-20 00:35:15.254 | INFO     | modules.websocket_monitor:check_websocket_health:22 - Successfully connected to WebSocket endpoint: ws://localhost:8800
+2025-02-20 00:35:15.314 | INFO     | modules.node_health:get_health:24 - RPC node is healthy
+2025-02-20 00:35:15.322 | INFO     | modules.version:get_version:39 - RPC node version: 2.1.13
+2025-02-20 00:35:15.350 | INFO     | modules.tx_monitor:get_transaction_types:101 - Transaction type distribution: {'error': 44, 'success': 56}
+2025-02-20 00:35:15.368 | INFO     | modules.websocket_monitor:check_websocket_health:35 - WebSocket connection healthy - Latency: 413.58ms
+2025-02-20 00:35:15.475 | DEBUG    | modules.websocket_monitor:check_websocket_health:46 - Successfully unsubscribed from slot updates
+2025-02-20 00:35:15.478 | DEBUG    | modules.slot_monitor:get_block_heights:79 - Block height difference: 0
+2025-02-20 00:35:15.479 | DEBUG    | modules.slot_monitor:get_slot_info:47 - Slot difference: 1
+2025-02-20 00:35:16.581 | INFO     | exporter.collector:collect:40 - Metrics collection completed in 1.63 seconds
+2025-02-20 00:35:16.582 | INFO     | exporter.exporter:run_exporter:40 - Metrics collected successfully in 1.63 seconds
+2025-02-20 00:35:16.582 | INFO     | exporter.exporter:run_exporter:44 - Sleeping for 30 seconds
+2025-02-20 00:35:46.583 | INFO     | exporter.exporter:run_exporter:37 - Starting collection of metrics
+2025-02-20 00:35:46.585 | INFO     | exporter.collector:collect:34 - Starting metrics collection
+2025-02-20 00:35:46.873 | INFO     | modules.tx_monitor:get_transaction_stats:41 - Processed 259518 transactions, Success rate: 100.00%, Error rate: 0.00%
+2025-02-20 00:35:46.876 | DEBUG    | modules.tx_monitor:get_transaction_stats:56 - Transaction latency - Avg: 0.00ms, P90: 0.00ms
+2025-02-20 00:35:46.877 | INFO     | modules.websocket_monitor:check_websocket_health:22 - Successfully connected to WebSocket endpoint: ws://localhost:8800
+2025-02-20 00:35:46.908 | INFO     | modules.node_health:get_health:24 - RPC node is healthy
+2025-02-20 00:35:46.937 | INFO     | modules.version:get_version:39 - RPC node version: 2.1.13
+2025-02-20 00:35:46.985 | INFO     | modules.websocket_monitor:check_websocket_health:35 - WebSocket connection healthy - Latency: 396.76ms
+2025-02-20 00:35:47.026 | INFO     | modules.tx_monitor:get_transaction_types:101 - Transaction type distribution: {'error': 9, 'success': 91}
+2025-02-20 00:35:47.092 | DEBUG    | modules.websocket_monitor:check_websocket_health:46 - Successfully unsubscribed from slot updates
+2025-02-20 00:35:47.208 | DEBUG    | modules.slot_monitor:get_slot_info:47 - Slot difference: 2
+2025-02-20 00:35:47.213 | DEBUG    | modules.slot_monitor:get_block_heights:79 - Block height difference: 1
+2025-02-20 00:35:48.255 | INFO     | exporter.collector:collect:40 - Metrics collection completed in 1.67 seconds
+2025-02-20 00:35:48.256 | INFO     | exporter.exporter:run_exporter:40 - Metrics collected successfully in 1.67 seconds
+2025-02-20 00:35:48.257 | INFO     | exporter.exporter:run_exporter:44 - Sleeping for 30 seconds
+2025-02-20 00:36:18.258 | INFO     | exporter.exporter:run_exporter:37 - Starting collection of metrics
+2025-02-20 00:36:18.260 | INFO     | exporter.collector:collect:34 - Starting metrics collection
+2025-02-20 00:36:18.552 | INFO     | modules.node_health:get_health:24 - RPC node is healthy
+2025-02-20 00:36:18.557 | INFO     | modules.tx_monitor:get_transaction_stats:41 - Processed 258602 transactions, Success rate: 100.00%, Error rate: 0.00%
+2025-02-20 00:36:18.557 | DEBUG    | modules.tx_monitor:get_transaction_stats:56 - Transaction latency - Avg: 0.00ms, P90: 0.00ms
+2025-02-20 00:36:18.558 | INFO     | modules.websocket_monitor:check_websocket_health:22 - Successfully connected to WebSocket endpoint: ws://localhost:8800
+2025-02-20 00:36:18.566 | INFO     | modules.version:get_version:39 - RPC node version: 2.1.13
+2025-02-20 00:36:18.626 | INFO     | modules.tx_monitor:get_transaction_types:101 - Transaction type distribution: {'error': 18, 'success': 82}
+2025-02-20 00:36:18.672 | INFO     | modules.websocket_monitor:check_websocket_health:35 - WebSocket connection healthy - Latency: 410.26ms
+2025-02-20 00:36:18.781 | DEBUG    | modules.websocket_monitor:check_websocket_health:46 - Successfully unsubscribed from slot updates
+2025-02-20 00:36:18.811 | DEBUG    | modules.slot_monitor:get_block_heights:79 - Block height difference: 0
+2025-02-20 00:36:18.829 | DEBUG    | modules.slot_monitor:get_slot_info:47 - Slot difference: 1
+2025-02-20 00:36:19.891 | INFO     | exporter.collector:collect:40 - Metrics collection completed in 1.63 seconds
+2025-02-20 00:36:19.891 | INFO     | exporter.exporter:run_exporter:40 - Metrics collected successfully in 1.63 seconds
+2025-02-20 00:36:19.892 | INFO     | exporter.exporter:run_exporter:44 - Sleeping for 30 seconds
+2025-02-20 00:36:49.893 | INFO     | exporter.exporter:run_exporter:37 - Starting collection of metrics
+2025-02-20 00:36:49.895 | INFO     | exporter.collector:collect:34 - Starting metrics collection
+2025-02-20 00:36:50.186 | INFO     | modules.websocket_monitor:check_websocket_health:22 - Successfully connected to WebSocket endpoint: ws://localhost:8800
+2025-02-20 00:36:50.302 | INFO     | modules.websocket_monitor:check_websocket_health:35 - WebSocket connection healthy - Latency: 404.46ms
+2025-02-20 00:36:50.410 | DEBUG    | modules.websocket_monitor:check_websocket_health:46 - Successfully unsubscribed from slot updates
+2025-02-20 00:36:50.660 | INFO     | modules.version:get_version:39 - RPC node version: 2.1.13
+2025-02-20 00:36:50.693 | INFO     | modules.node_health:get_health:24 - RPC node is healthy
+2025-02-20 00:36:50.697 | INFO     | modules.tx_monitor:get_transaction_stats:41 - Processed 258602 transactions, Success rate: 100.00%, Error rate: 0.00%
+2025-02-20 00:36:50.697 | DEBUG    | modules.tx_monitor:get_transaction_stats:56 - Transaction latency - Avg: 0.00ms, P90: 0.00ms
+2025-02-20 00:36:50.698 | INFO     | modules.tx_monitor:get_transaction_types:101 - Transaction type distribution: {'success': 93, 'error': 6, 'memo': 1}
+2025-02-20 00:36:50.941 | DEBUG    | modules.slot_monitor:get_block_heights:79 - Block height difference: 1
+2025-02-20 00:36:50.945 | DEBUG    | modules.slot_monitor:get_slot_info:47 - Slot difference: 1
+2025-02-20 00:36:51.519 | INFO     | exporter.collector:collect:40 - Metrics collection completed in 1.62 seconds
+2025-02-20 00:36:51.520 | INFO     | exporter.exporter:run_exporter:40 - Metrics collected successfully in 1.63 seconds
+2025-02-20 00:36:51.523 | INFO     | exporter.exporter:run_exporter:44 - Sleeping for 30 seconds
+2025-02-20 00:37:21.524 | INFO     | exporter.exporter:run_exporter:37 - Starting collection of metrics
+2025-02-20 00:37:21.525 | INFO     | exporter.collector:collect:34 - Starting metrics collection
+2025-02-20 00:37:21.814 | INFO     | modules.websocket_monitor:check_websocket_health:22 - Successfully connected to WebSocket endpoint: ws://localhost:8800
+2025-02-20 00:37:21.883 | INFO     | modules.tx_monitor:get_transaction_stats:41 - Processed 258443 transactions, Success rate: 100.00%, Error rate: 0.00%
+2025-02-20 00:37:21.884 | DEBUG    | modules.tx_monitor:get_transaction_stats:56 - Transaction latency - Avg: 0.00ms, P90: 0.00ms
+2025-02-20 00:37:21.891 | INFO     | modules.version:get_version:39 - RPC node version: 2.1.13
+2025-02-20 00:37:21.894 | INFO     | modules.node_health:get_health:24 - RPC node is healthy
+2025-02-20 00:37:21.920 | INFO     | modules.websocket_monitor:check_websocket_health:35 - WebSocket connection healthy - Latency: 391.61ms
+2025-02-20 00:37:22.036 | DEBUG    | modules.websocket_monitor:check_websocket_health:46 - Successfully unsubscribed from slot updates
+2025-02-20 00:37:22.088 | DEBUG    | modules.slot_monitor:get_slot_info:47 - Slot difference: 1
+2025-02-20 00:37:22.090 | DEBUG    | modules.slot_monitor:get_block_heights:79 - Block height difference: 0
+2025-02-20 00:37:22.237 | INFO     | modules.tx_monitor:get_transaction_types:101 - Transaction type distribution: {'error': 17, 'success': 81, 'memo': 2}
+2025-02-20 00:37:23.180 | INFO     | exporter.collector:collect:40 - Metrics collection completed in 1.65 seconds
+2025-02-20 00:37:23.180 | INFO     | exporter.exporter:run_exporter:40 - Metrics collected successfully in 1.66 seconds
+2025-02-20 00:37:23.181 | INFO     | exporter.exporter:run_exporter:44 - Sleeping for 30 seconds
+2025-02-20 00:37:53.182 | INFO     | exporter.exporter:run_exporter:37 - Starting collection of metrics
+2025-02-20 00:37:53.184 | INFO     | exporter.collector:collect:34 - Starting metrics collection
+2025-02-20 00:37:53.467 | INFO     | modules.tx_monitor:get_transaction_stats:41 - Processed 258443 transactions, Success rate: 100.00%, Error rate: 0.00%
+2025-02-20 00:37:53.468 | DEBUG    | modules.tx_monitor:get_transaction_stats:56 - Transaction latency - Avg: 0.00ms, P90: 0.00ms
+2025-02-20 00:37:53.469 | INFO     | modules.node_health:get_health:24 - RPC node is healthy
+2025-02-20 00:37:53.473 | INFO     | modules.websocket_monitor:check_websocket_health:22 - Successfully connected to WebSocket endpoint: ws://localhost:8800
+2025-02-20 00:37:53.583 | INFO     | modules.websocket_monitor:check_websocket_health:35 - WebSocket connection healthy - Latency: 397.32ms
+2025-02-20 00:37:53.692 | DEBUG    | modules.websocket_monitor:check_websocket_health:46 - Successfully unsubscribed from slot updates
+2025-02-20 00:37:53.823 | INFO     | modules.version:get_version:39 - RPC node version: 2.1.13
+2025-02-20 00:37:53.852 | INFO     | modules.tx_monitor:get_transaction_types:101 - Transaction type distribution: {'success': 89, 'error': 11}
+2025-02-20 00:37:54.120 | DEBUG    | modules.slot_monitor:get_slot_info:47 - Slot difference: 1
+2025-02-20 00:37:54.130 | DEBUG    | modules.slot_monitor:get_block_heights:79 - Block height difference: 0
+2025-02-20 00:37:54.808 | INFO     | exporter.collector:collect:40 - Metrics collection completed in 1.62 seconds
+2025-02-20 00:37:54.808 | INFO     | exporter.exporter:run_exporter:40 - Metrics collected successfully in 1.63 seconds
+2025-02-20 00:37:54.809 | INFO     | exporter.exporter:run_exporter:44 - Sleeping for 30 seconds
+2025-02-20 00:38:24.810 | INFO     | exporter.exporter:run_exporter:37 - Starting collection of metrics
+2025-02-20 00:38:24.811 | INFO     | exporter.collector:collect:34 - Starting metrics collection
+2025-02-20 00:38:25.096 | INFO     | modules.websocket_monitor:check_websocket_health:22 - Successfully connected to WebSocket endpoint: ws://localhost:8800
+2025-02-20 00:38:25.097 | INFO     | modules.version:get_version:39 - RPC node version: 2.1.13
+2025-02-20 00:38:25.100 | INFO     | modules.tx_monitor:get_transaction_stats:41 - Processed 268489 transactions, Success rate: 100.00%, Error rate: 0.00%
+2025-02-20 00:38:25.100 | DEBUG    | modules.tx_monitor:get_transaction_stats:56 - Transaction latency - Avg: 0.00ms, P90: 0.00ms
+2025-02-20 00:38:25.155 | INFO     | modules.node_health:get_health:24 - RPC node is healthy
+2025-02-20 00:38:25.205 | INFO     | modules.websocket_monitor:check_websocket_health:35 - WebSocket connection healthy - Latency: 391.41ms
+2025-02-20 00:38:25.293 | DEBUG    | modules.websocket_monitor:check_websocket_health:46 - Successfully unsubscribed from slot updates
+2025-02-20 00:38:25.301 | INFO     | modules.tx_monitor:get_transaction_types:101 - Transaction type distribution: {'success': 82, 'error': 18}
+2025-02-20 00:38:25.356 | DEBUG    | modules.slot_monitor:get_block_heights:79 - Block height difference: 1
+2025-02-20 00:38:25.373 | DEBUG    | modules.slot_monitor:get_slot_info:47 - Slot difference: 1
+2025-02-20 00:38:26.406 | INFO     | exporter.collector:collect:40 - Metrics collection completed in 1.59 seconds
+2025-02-20 00:38:26.407 | INFO     | exporter.exporter:run_exporter:40 - Metrics collected successfully in 1.60 seconds
+2025-02-20 00:38:26.407 | INFO     | exporter.exporter:run_exporter:44 - Sleeping for 30 seconds
+2025-02-20 00:38:56.408 | INFO     | exporter.exporter:run_exporter:37 - Starting collection of metrics
+2025-02-20 00:38:56.410 | INFO     | exporter.collector:collect:34 - Starting metrics collection
+2025-02-20 00:38:56.697 | INFO     | modules.node_health:get_health:24 - RPC node is healthy
+2025-02-20 00:38:56.701 | INFO     | modules.tx_monitor:get_transaction_stats:41 - Processed 268489 transactions, Success rate: 100.00%, Error rate: 0.00%
+2025-02-20 00:38:56.702 | DEBUG    | modules.tx_monitor:get_transaction_stats:56 - Transaction latency - Avg: 0.00ms, P90: 0.00ms
+2025-02-20 00:38:56.703 | INFO     | modules.websocket_monitor:check_websocket_health:22 - Successfully connected to WebSocket endpoint: ws://localhost:8800
+2025-02-20 00:38:56.809 | INFO     | modules.websocket_monitor:check_websocket_health:35 - WebSocket connection healthy - Latency: 395.68ms
+2025-02-20 00:38:56.851 | DEBUG    | modules.websocket_monitor:check_websocket_health:46 - Successfully unsubscribed from slot updates
+2025-02-20 00:38:56.880 | INFO     | modules.tx_monitor:get_transaction_types:101 - Transaction type distribution: {'success': 91, 'error': 9}
+2025-02-20 00:38:56.885 | INFO     | modules.version:get_version:39 - RPC node version: 2.1.13
+2025-02-20 00:38:56.995 | DEBUG    | modules.slot_monitor:get_block_heights:79 - Block height difference: 1
+2025-02-20 00:38:57.106 | DEBUG    | modules.slot_monitor:get_slot_info:47 - Slot difference: 1
+2025-02-20 00:38:57.959 | INFO     | exporter.collector:collect:40 - Metrics collection completed in 1.55 seconds
+2025-02-20 00:38:57.960 | INFO     | exporter.exporter:run_exporter:40 - Metrics collected successfully in 1.55 seconds
+2025-02-20 00:38:57.961 | INFO     | exporter.exporter:run_exporter:44 - Sleeping for 30 seconds
+2025-02-20 00:39:27.963 | INFO     | exporter.exporter:run_exporter:37 - Starting collection of metrics
+2025-02-20 00:39:27.964 | INFO     | exporter.collector:collect:34 - Starting metrics collection
+2025-02-20 00:39:28.247 | INFO     | modules.websocket_monitor:check_websocket_health:22 - Successfully connected to WebSocket endpoint: ws://localhost:8800
+2025-02-20 00:39:28.355 | INFO     | modules.websocket_monitor:check_websocket_health:35 - WebSocket connection healthy - Latency: 388.89ms
+2025-02-20 00:39:28.449 | INFO     | modules.node_health:get_health:24 - RPC node is healthy
+2025-02-20 00:39:28.451 | INFO     | modules.tx_monitor:get_transaction_stats:41 - Processed 260325 transactions, Success rate: 100.00%, Error rate: 0.00%
+2025-02-20 00:39:28.452 | DEBUG    | modules.tx_monitor:get_transaction_stats:56 - Transaction latency - Avg: 0.00ms, P90: 0.00ms
+2025-02-20 00:39:28.456 | INFO     | modules.version:get_version:39 - RPC node version: 2.1.13
+2025-02-20 00:39:28.458 | DEBUG    | modules.websocket_monitor:check_websocket_health:46 - Successfully unsubscribed from slot updates
+2025-02-20 00:39:28.490 | INFO     | modules.tx_monitor:get_transaction_types:101 - Transaction type distribution: {'error': 32, 'success': 67, 'memo': 1}
+2025-02-20 00:39:28.726 | DEBUG    | modules.slot_monitor:get_block_heights:79 - Block height difference: 1
+2025-02-20 00:39:28.737 | DEBUG    | modules.slot_monitor:get_slot_info:47 - Slot difference: 1
+2025-02-20 00:39:29.570 | INFO     | exporter.collector:collect:40 - Metrics collection completed in 1.61 seconds
+2025-02-20 00:39:29.571 | INFO     | exporter.exporter:run_exporter:40 - Metrics collected successfully in 1.61 seconds
+2025-02-20 00:39:29.572 | INFO     | exporter.exporter:run_exporter:44 - Sleeping for 30 seconds
+2025-02-20 00:39:32.661 | INFO     | exporter.exporter:graceful_shutdown:13 - Received exit signal SIGINT...
+2025-02-20 00:39:32.662 | INFO     | exporter.exporter:graceful_shutdown:16 - Cancelling 1 outstanding tasks
+2025-02-20 00:39:32.662 | INFO     | exporter.exporter:main:66 - Shutting down RPC monitor

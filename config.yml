@@ -1,0 +1,8 @@
+network_rpc_endpoint: https://api.mainnet-beta.solana.com
+solana_rpc_endpoint: http://localhost:8799
+solana_ws_endpoint: ws://localhost:8800
+sleep_time: 30
+metric_port: 9090
+thread_pool_size: 2
+log_level: DEBUG
+retry: 10
