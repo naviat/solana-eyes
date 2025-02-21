@@ -1,0 +1,26 @@
+# Ignore Python cache directories
+__pycache__/
+*.pyc
+*.pyo
+
+# If you use a local virtual environment
+venv/
+env/
+
+# Common IDE/project files
+*.swp
+.idea/
+.vscode/
+
+# Git
+.git
+.gitignore
+
+# Docker
+.dockerignore
+
+# Other potentially large or sensitive files
+# (Uncomment or add as needed)
+# .env
+# node_modules/
+# .pytest_cache/
