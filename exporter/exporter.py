@@ -1,4 +1,4 @@
-import asyncio
+import asyncio, sys
 import signal
 from prometheus_client import start_http_server
 import time
@@ -47,15 +47,24 @@ async def run_exporter():
 
 def main():
     """Main entry point for the exporter"""
+    logger.remove()
     logger.add("logs/monitor.log",
                level=LOG_LEVEL,
+               format="{time:YYYY-MM-DD HH:mm:ss.SSS} | {level: <8} | {message}",
                rotation="00:00",
                retention="6 days",
                compression=None,
                backtrace=True,
                diagnose=True,
                enqueue=True)
-
+    # Add console handler
+    logger.add(
+        sys.stdout,
+        format="<green>{time:YYYY-MM-DD HH:mm:ss.SSS}</green> | <level>{level: <8}</level> | <cyan>{message}</cyan>",
+        level=LOG_LEVEL,
+        colorize=True
+    )
+    
     loop = asyncio.get_event_loop()
     setup_signals(loop)
     try:
