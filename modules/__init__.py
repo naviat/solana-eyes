@@ -13,7 +13,7 @@ __all__ = [
     # Slot and block monitoring
     'get_slot_info',
     'get_block_heights',
-    #'get_block_time',
+    'get_block_time',
     
     # Transaction monitoring
     'get_transaction_stats',

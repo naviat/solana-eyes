@@ -6,11 +6,13 @@ from modules.tx_monitor import get_transaction_stats, get_transaction_types
 from modules.version import get_version
 from modules.websocket_monitor import check_websocket_health
 from modules.epoch_monitor import get_epoch_info
+from modules.block_time import get_block_time
 
 
 async def run_async_tasks():
     """Run all async monitoring tasks"""
     tasks = {
+        "block_time": get_block_time(),
         "health": get_health(),
         "slot_info": get_slot_info(),
         "block_heights": get_block_heights(),

@@ -41,5 +41,9 @@ __all__ = [
     # Epoch metrics
     'solana_network_epoch',
     'solana_slot_in_epoch',
-    'solana_slot_index'
+    'solana_slot_index',
+    
+    # Block time metrics
+    'solana_block_time',
+    'solana_block_time_diff'
 ]

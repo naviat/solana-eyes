@@ -14,6 +14,10 @@ solana_current_slot = Gauge('solana_current_slot', 'Current RPC node slot height
 solana_net_current_slot = Gauge('solana_net_current_slot', 'Current network slot height')
 solana_slot_diff = Gauge('solana_slot_diff', 'Slot difference between your RPC and network')
 
+# Block time metrics
+solana_block_time = Gauge('solana_block_time', 'Current block time in seconds since unix epoch')
+solana_block_time_diff = Gauge('solana_block_time_diff', 'Time difference between current time and block time in seconds')
+
 # Shred metrics
 solana_max_shred_insert_slot = Gauge('solana_max_shred_insert_slot', 'Max slot seen from after shred insert')
 solana_max_retransmit_slot = Gauge('solana_max_retransmit_slot', 'Max slot seen from retransmit stage')
