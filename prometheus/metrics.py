@@ -36,7 +36,7 @@ solana_tx_success_rate = Gauge('solana_tx_success_rate', 'Transaction success ra
 solana_tx_error_rate = Gauge('solana_tx_error_rate', 'Transaction error rate')
 solana_rpc_processed_tx_count = Gauge('solana_rpc_processed_tx_count', 'Number of transactions processed')
 solana_rpc_tx_by_type = Gauge('solana_rpc_tx_by_type', 'Transaction count by type', ['tx_type'])
-solana_rpc_tx_latency = Gauge('solana_rpc_tx_latency', 'Transaction processing latency', ['percentile'])
+solana_rpc_tx_latency = Gauge('solana_rpc_tx_latency', 'Transactions per second', ['type'])
 
 # Epoch metrics
 solana_network_epoch = Gauge('solana_network_epoch', 'Current epoch of network')

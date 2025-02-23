@@ -32,7 +32,8 @@ async def get_health():
                 update_metric(solana_node_health, 1, labels={"status": "healthy", "cause": "none"})
                 logger.info("RPC node is healthy")
                 last_slots_behind = solana_node_slots_behind._value.get()
-                logger.info(f"RPC node is healthy. Last recorded slots behind when unhealthy: {last_slots_behind}")
+                if last_slots_behind:
+                    logger.info(f"RPC node is healthy. Last recorded slots behind when unhealthy: {last_slots_behind}")
             elif "error" in result:
                 error_message = result["error"].get("message", "Unknown error")
                 slots_behind = result["error"]["data"].get("numSlotsBehind", 0)
