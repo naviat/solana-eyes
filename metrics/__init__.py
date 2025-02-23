@@ -37,6 +37,7 @@ __all__ = [
     'solana_rpc_processed_tx_count',
     'solana_rpc_tx_by_type',
     'solana_rpc_tx_latency',
+    'solana_confirmed_transactions_total',
 
     # Epoch metrics
     'solana_network_epoch',

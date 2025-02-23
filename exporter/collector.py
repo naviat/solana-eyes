@@ -2,7 +2,7 @@ import asyncio
 from loguru import logger
 from modules.node_health import get_health
 from modules.slot_monitor import get_slot_info, get_block_heights
-from modules.tx_monitor import get_transaction_stats, get_transaction_types
+from modules.tx_monitor import get_transaction_stats, get_transaction_types, get_confirmed_transactions_total
 from modules.version import get_version
 from modules.websocket_monitor import check_websocket_health
 from modules.epoch_monitor import get_epoch_info
@@ -20,7 +20,8 @@ async def run_async_tasks():
         "tx_types": get_transaction_types(),
         "version": get_version(),
         "websocket": check_websocket_health(),
-        "epoch_info": get_epoch_info()
+        "epoch_info": get_epoch_info(),
+        "confirmed_tx_total": get_confirmed_transactions_total()
     }
 
     try:
