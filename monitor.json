@@ -110,7 +110,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "solana_network_epoch{app_kubernetes_io_instance=\"$host\"}",
+          "expr": "max(solana_network_epoch{app_kubernetes_io_instance=\"$host\"})",
           "instant": false,
           "interval": "",
           "legendFormat": "",
@@ -185,7 +185,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "(solana_slot_index{app_kubernetes_io_instance=\"$host\"}*100)/solana_slot_in_epoch{app_kubernetes_io_instance=\"$host\"}",
+          "expr": "100 \n* ( \n    max by (app_kubernetes_io_instance)(solana_slot_index{app_kubernetes_io_instance=\"$host\"})\n    /\n    max by (app_kubernetes_io_instance)(solana_slot_in_epoch{app_kubernetes_io_instance=\"$host\"})\n  )",
           "instant": false,
           "legendFormat": "__auto",
           "range": true,
@@ -872,10 +872,6 @@
               {
                 "color": "green",
                 "value": null
-              },
-              {
-                "color": "red",
-                "value": 80
               }
             ]
           }
@@ -901,6 +897,7 @@
           "fields": "",
           "values": false
         },
+        "text": {},
         "textMode": "auto"
       },
       "pluginVersion": "10.0.2",
@@ -911,7 +908,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "solana_rpc_websocket_connections{app_kubernetes_io_instance=\"$host\"}",
+          "expr": "max by (app_kubernetes_io_instance)(solana_rpc_websocket_connections{app_kubernetes_io_instance=\"$host\"})",
           "instant": false,
           "range": true,
           "refId": "A"
@@ -942,7 +939,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
+                "color": "#861cbc",
                 "value": null
               }
             ]
@@ -973,9 +970,7 @@
           "values": false
         },
         "showPercentChange": false,
-        "text": {
-          "valueSize": 25
-        },
+        "text": {},
         "textMode": "name",
         "wideLayout": true
       },
@@ -989,7 +984,7 @@
           "disableTextWrap": false,
           "editorMode": "code",
           "exemplar": true,
-          "expr": "topk(1, solana_node_version{app_kubernetes_io_instance=\"$host\"})",
+          "expr": "max by (version)(\n  solana_node_version{app_kubernetes_io_instance=\"$host\"}\n)",
           "fullMetaSearch": false,
           "hide": false,
           "includeNullMetadata": true,
@@ -1029,10 +1024,6 @@
               {
                 "color": "green",
                 "value": null
-              },
-              {
-                "color": "red",
-                "value": 80
               }
             ]
           },
@@ -1042,7 +1033,7 @@
       },
       "gridPos": {
         "h": 4,
-        "w": 4,
+        "w": 2,
         "x": 3,
         "y": 3
       },
@@ -1073,7 +1064,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "time() - kube_pod_start_time{pod=~\"$host.*\"}",
+          "expr": "time() - max(kube_pod_start_time{pod=~\"$host.*\"})",
           "intervalFactor": 2,
           "range": true,
           "refId": "A",
@@ -1082,6 +1073,175 @@
       ],
       "title": "Uptime",
       "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${DS_PROMETHEUS}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "blue",
+                "value": 0
+              },
+              {
+                "color": "#EAB839",
+                "value": 2
+              },
+              {
+                "color": "red",
+                "value": 5
+              }
+            ]
+          },
+          "unit": "s"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 2,
+        "x": 5,
+        "y": 3
+      },
+      "id": 61,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "10.0.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
+          },
+          "editorMode": "code",
+          "expr": "solana_block_time_diff{app_kubernetes_io_instance=\"$host\"}",
+          "instant": false,
+          "legendFormat": "{{nodeId}}",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Block Time Lag",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${DS_PROMETHEUS}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 10,
+            "gradientMode": "opacity",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 2,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "s"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 4,
+        "x": 7,
+        "y": 5
+      },
+      "id": 62,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
+          },
+          "editorMode": "code",
+          "expr": "solana_block_time_diff{app_kubernetes_io_instance=\"$host\"}",
+          "instant": false,
+          "legendFormat": "{{release}}",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Block Time History",
+      "type": "timeseries"
     },
     {
       "datasource": {
@@ -1147,9 +1307,9 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 6,
-        "w": 9,
-        "x": 7,
+        "h": 5,
+        "w": 5,
+        "x": 11,
         "y": 5
       },
       "id": 43,
@@ -1203,12 +1363,12 @@
                 "0": {
                   "color": "red",
                   "index": 1,
-                  "text": "Down"
+                  "text": "Unhealthy"
                 },
                 "1": {
                   "color": "green",
                   "index": 0,
-                  "text": "OK"
+                  "text": "Healthy"
                 }
               },
               "type": "value"
@@ -1247,9 +1407,7 @@
           "values": false
         },
         "showPercentChange": false,
-        "text": {
-          "valueSize": 25
-        },
+        "text": {},
         "textMode": "value",
         "wideLayout": false
       },
@@ -1261,14 +1419,16 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "solana_node_health{status=\"healthy\", app_kubernetes_io_instance=\"$host\"}",
-          "instant": false,
+          "exemplar": false,
+          "expr": "max by (app_kubernetes_io_instance)(\n  solana_node_health{app_kubernetes_io_instance=\"$host\"}\n)",
+          "instant": true,
           "legendFormat": "__auto",
-          "range": true,
+          "range": false,
           "refId": "A"
         }
       ],
-      "title": "Healthy",
+      "title": "Health Status",
+      "transformations": [],
       "type": "stat"
     },
     {
@@ -1858,6 +2018,108 @@
         "type": "prometheus",
         "uid": "${DS_PROMETHEUS}"
       },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "line"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "transparent",
+                "value": null
+              },
+              {
+                "color": "green",
+                "value": 100
+              },
+              {
+                "color": "#EAB839",
+                "value": 200
+              },
+              {
+                "color": "red",
+                "value": 500
+              }
+            ]
+          },
+          "unit": "ms"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 9,
+        "x": 7,
+        "y": 10
+      },
+      "id": 56,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": false
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
+          },
+          "editorMode": "code",
+          "expr": "solana_rpc_websocket_latency{app_kubernetes_io_instance=\"$host\"}",
+          "instant": false,
+          "legendFormat": "{{nodeId}}",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "WebSocket Latency",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${DS_PROMETHEUS}"
+      },
       "description": "Basic network info per interface",
       "fieldConfig": {
         "defaults": {
@@ -2299,8 +2561,10 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
+          "exemplar": false,
           "expr": "irate(container_network_receive_bytes_total{namespace=\"default\", pod=~\"${host}.*\"}[5m])*8",
           "format": "time_series",
+          "instant": false,
           "intervalFactor": 2,
           "legendFormat": "recv {{interface}}",
           "range": true,
@@ -2313,8 +2577,10 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
+          "exemplar": false,
           "expr": "irate(container_network_transmit_bytes_total{namespace=\"default\", pod=~\"${host}.*\"}[5m])*8",
           "format": "time_series",
+          "instant": false,
           "intervalFactor": 2,
           "legendFormat": "trans {{interface}} ",
           "range": true,
@@ -2330,6 +2596,7 @@
         "type": "prometheus",
         "uid": "${DS_PROMETHEUS}"
       },
+      "description": "",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -2359,7 +2626,7 @@
             "spanNulls": false,
             "stacking": {
               "group": "A",
-              "mode": "none"
+              "mode": "normal"
             },
             "thresholdsStyle": {
               "mode": "line"
@@ -2392,12 +2659,12 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 7,
+        "h": 4,
         "w": 9,
         "x": 7,
-        "y": 11
+        "y": 14
       },
-      "id": 56,
+      "id": 57,
       "options": {
         "legend": {
           "calcs": [],
@@ -2417,13 +2684,27 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "solana_rpc_websocket_latency{app_kubernetes_io_instance=\"$host\"}",
+          "expr": "solana_rpc_latency{app_kubernetes_io_instance=\"$host\"}",
           "instant": false,
+          "legendFormat": "{{method}}",
           "range": true,
           "refId": "A"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
+          },
+          "editorMode": "code",
+          "expr": "rate(solana_rpc_errors{app_kubernetes_io_instance=\"$host\"}[5m])",
+          "hide": false,
+          "instant": false,
+          "legendFormat": "{{method}}",
+          "range": true,
+          "refId": "B"
         }
       ],
-      "title": "WebSocket Latency",
+      "title": "RPC Latency",
       "type": "timeseries"
     },
     {
@@ -2500,8 +2781,8 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 7,
-        "w": 24,
+        "h": 11,
+        "w": 17,
         "x": 0,
         "y": 19
       },
@@ -2540,12 +2821,279 @@
       "type": "timeseries"
     },
     {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${DS_PROMETHEUS}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            }
+          },
+          "mappings": []
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "error"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "orange",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "memo"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "purple",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 3,
+        "x": 17,
+        "y": 19
+      },
+      "id": 58,
+      "options": {
+        "displayLabels": [],
+        "legend": {
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true,
+          "values": []
+        },
+        "pieType": "pie",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
+          },
+          "editorMode": "code",
+          "exemplar": false,
+          "expr": "solana_rpc_tx_by_type{app_kubernetes_io_instance=\"$host\"}",
+          "instant": true,
+          "legendFormat": "{{tx_type}}",
+          "range": false,
+          "refId": "A"
+        }
+      ],
+      "title": "Transaction Type Distribution",
+      "type": "piechart"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${DS_PROMETHEUS}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 6,
+        "w": 4,
+        "x": 20,
+        "y": 19
+      },
+      "id": 59,
+      "options": {
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true
+      },
+      "pluginVersion": "10.0.2",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
+          },
+          "editorMode": "code",
+          "exemplar": false,
+          "expr": "solana_tx_success_rate{app_kubernetes_io_instance=\"$host\"}",
+          "instant": true,
+          "interval": "",
+          "legendFormat": "{{__name__}}",
+          "range": false,
+          "refId": "A"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
+          },
+          "editorMode": "code",
+          "exemplar": false,
+          "expr": "solana_tx_error_rate{app_kubernetes_io_instance=\"$host\"}",
+          "format": "time_series",
+          "hide": false,
+          "instant": true,
+          "legendFormat": "{{__name__}}",
+          "range": false,
+          "refId": "B"
+        }
+      ],
+      "title": "Success/Error Rate",
+      "type": "gauge"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${DS_PROMETHEUS}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 1,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineStyle": {
+              "fill": "solid"
+            },
+            "lineWidth": 1,
+            "pointSize": 4,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": true,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 7,
+        "x": 17,
+        "y": 25
+      },
+      "id": 60,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
+          },
+          "editorMode": "code",
+          "expr": "sum by(tx_type) (solana_rpc_tx_by_type{app_kubernetes_io_instance=\"$host\"})",
+          "instant": false,
+          "legendFormat": "{{label_name}}",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Transaction Types Over Time",
+      "type": "timeseries"
+    },
+    {
       "collapsed": false,
       "gridPos": {
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 26
+        "y": 30
       },
       "id": 12,
       "panels": [],
@@ -2634,7 +3182,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 27
+        "y": 31
       },
       "id": 32,
       "options": {
@@ -2752,7 +3300,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 27
+        "y": 31
       },
       "id": 33,
       "options": {
@@ -2795,7 +3343,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 35
+        "y": 39
       },
       "id": 50,
       "panels": [],
@@ -2883,7 +3431,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 36
+        "y": 40
       },
       "id": 48,
       "options": {
@@ -3029,7 +3577,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 36
+        "y": 40
       },
       "id": 49,
       "options": {
@@ -3072,7 +3620,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 44
+        "y": 48
       },
       "id": 45,
       "panels": [],
@@ -3143,7 +3691,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 45
+        "y": 49
       },
       "id": 51,
       "options": {
@@ -3249,7 +3797,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 45
+        "y": 49
       },
       "id": 52,
       "options": {
@@ -3357,7 +3905,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 53
+        "y": 57
       },
       "id": 53,
       "options": {
@@ -3397,6 +3945,7 @@
           "expr": "accounts_index_count{db=\"$host\"}",
           "hide": false,
           "instant": false,
+          "legendFormat": "{{__name__}}",
           "range": true,
           "refId": "B"
         }
@@ -3465,7 +4014,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 53
+        "y": 57
       },
       "id": 54,
       "options": {
@@ -3486,8 +4035,8 @@
             "type": "prometheus",
             "uid": "${DS_PROMETHEUS}"
           },
-          "editorMode": "builder",
-          "expr": "blockstore_rocksdb_cfs_num_running_compactions{db=\"solana-mainnet-nd-203-111-291\"}",
+          "editorMode": "code",
+          "expr": "blockstore_rocksdb_cfs_num_running_compactions{db=\"$host\"}",
           "instant": true,
           "key": "Q-60ee2db9-e4e9-46fd-8747-fd378fcf483c-0",
           "legendFormat": "{{cf_name}}",
@@ -3697,7 +4246,7 @@
     ]
   },
   "time": {
-    "from": "now-1h",
+    "from": "now-30m",
     "to": "now"
   },
   "timepicker": {
@@ -3712,9 +4261,9 @@
       "1d"
     ]
   },
-  "timezone": "browser",
+  "timezone": "utc",
   "title": "Solana Monitoring",
   "uid": "ddy9etwe3nzswf",
-  "version": 75,
+  "version": 116,
   "weekStart": ""
 }
