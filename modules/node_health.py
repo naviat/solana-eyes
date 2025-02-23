@@ -31,13 +31,21 @@ async def get_health():
             if "result" in result and result["result"] == "ok":
                 update_metric(solana_node_health, 1, labels={"status": "healthy", "cause": "none"})
                 logger.info("RPC node is healthy")
+                last_slots_behind = solana_node_slots_behind._value.get()
+                logger.info(f"RPC node is healthy. Last recorded slots behind when unhealthy: {last_slots_behind}")
             elif "error" in result:
                 error_message = result["error"].get("message", "Unknown error")
                 slots_behind = result["error"]["data"].get("numSlotsBehind", 0)
                 update_metric(solana_node_health, 0, labels={"status": "unhealthy", "cause": "slots_behind"})
                 update_metric(solana_node_slots_behind, slots_behind)
                 update_metric(solana_rpc_errors, 1, labels={"method": "getHealth"})
-                logger.error(f"RPC node is unhealthy: {error_message}.")
+                # Enhanced logging for unhealthy state with slots behind
+                logger.error(
+                    "RPC node is unhealthy\n"
+                    f"Error message: {error_message}\n"
+                    f"Current slots behind: {slots_behind}\n"
+                    f"Time: {time.strftime('%Y-%m-%d %H:%M:%S')}"
+                )
             else:
                 logger.error("Unexpected response format")
                 update_metric(solana_node_health, 0, labels={"status": "unhealthy", "cause": "unknown"})

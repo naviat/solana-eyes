@@ -1,5 +1,5 @@
 # modules/slot_monitor.py
-import aiohttp
+import aiohttp, time
 from loguru import logger
 from config import SOLANA_RPC_ENDPOINT, NETWORK_RPC_ENDPOINT, HEADERS
 from utils.func import update_metric
@@ -7,7 +7,8 @@ from prometheus.metrics import (
     solana_current_slot, solana_net_current_slot, solana_slot_diff,
     solana_block_height, solana_network_block_height, solana_block_height_diff,
     solana_max_shred_insert_slot, solana_max_retransmit_slot,
-    solana_net_max_shred_insert_slot, solana_net_max_retransmit_slot
+    solana_net_max_shred_insert_slot, solana_net_max_retransmit_slot,
+    solana_rpc_requests, solana_rpc_errors, solana_rpc_latency
 )
 
 async def get_shred_slots(session, endpoint, is_network=False):
@@ -28,10 +29,20 @@ async def get_shred_slots(session, endpoint, is_network=False):
     try:
         results = []
         for payload in payloads:
+            start_time = time.time()
             async with session.post(endpoint, json=payload, headers=HEADERS) as response:
                 result = await response.json()
+                end_time = time.time()
+                
+                # Update latency and request metrics
+                latency = end_time - start_time
+                method = payload["method"]
+                update_metric(solana_rpc_latency, latency, labels={"method": method})
+                update_metric(solana_rpc_requests, 1, labels={"method": method})
+                
+                if "error" in result:
+                    update_metric(solana_rpc_errors, 1, labels={"method": method})
                 results.append(result)
-
         # Process shred insert slot
         if "result" in results[0]:
             shred_insert_slot = results[0]["result"]
@@ -67,8 +78,15 @@ async def get_slot_info():
     try:
         async with aiohttp.ClientSession() as session:
             # Get slots from both endpoints
+            start_time = time.time()
             async with session.post(SOLANA_RPC_ENDPOINT, json=payload, headers=HEADERS) as response:
                 rpc_result = await response.json()
+                end_time = time.time()
+                # Update latency and request metrics
+                latency = end_time - start_time
+                update_metric(solana_rpc_latency, latency, labels={"method": "getSlot"})
+                update_metric(solana_rpc_requests, 1, labels={"method": "getSlot"})
+                
                 current_slot = rpc_result.get('result')
                 logger.debug(f"Local RPC slot: {current_slot}")
                 if current_slot is not None:
@@ -110,8 +128,15 @@ async def get_block_heights():
     try:
         async with aiohttp.ClientSession() as session:
             # Get block heights from both endpoints
+            start_time = time.time()
             async with session.post(SOLANA_RPC_ENDPOINT, json=payload, headers=HEADERS) as response:
                 rpc_result = await response.json()
+                end_time = time.time()
+                # Update latency and request metrics
+                latency = end_time - start_time
+                update_metric(solana_rpc_latency, latency, labels={"method": "getBlockHeight"})
+                update_metric(solana_rpc_requests, 1, labels={"method": "getBlockHeight"})
+                
                 rpc_height = rpc_result.get('result')
                 logger.debug(f"Local RPC block height: {rpc_height}")
                 if rpc_height is not None:
