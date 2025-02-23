@@ -3587,10 +3587,10 @@
         "current": {
           "selected": true,
           "text": [
-            "prod-lat-ash-1-worker-06"
+            "All"
           ],
           "value": [
-            "prod-lat-ash-1-worker-06"
+            "All"
           ]
         },
         "datasource": {
@@ -3644,8 +3644,8 @@
         "allValue": ".*",
         "current": {
           "selected": true,
-          "text": "10.25.1.6:9100",
-          "value": "10.25.1.6:9100"
+          "text": "All",
+          "value": "All"
         },
         "datasource": {
           "type": "prometheus",
