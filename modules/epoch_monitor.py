@@ -2,7 +2,7 @@ import aiohttp
 from loguru import logger
 from config import SOLANA_RPC_ENDPOINT, HEADERS
 from utils.func import update_metric
-from prometheus.metrics import (
+from metrics.metrics import (
     solana_network_epoch,
     solana_slot_in_epoch,
     solana_slot_index,

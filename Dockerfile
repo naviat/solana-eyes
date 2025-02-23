@@ -32,7 +32,7 @@ WORKDIR /app
 COPY exporter/ exporter/
 COPY modules/ modules/
 COPY utils/ utils/
-COPY prometheus/ prometheus/
+COPY metrics/ metrics/
 COPY config.py .
 COPY main.py .
 

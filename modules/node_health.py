@@ -4,7 +4,7 @@ import time
 from loguru import logger
 from config import SOLANA_RPC_ENDPOINT, HEADERS
 from utils.func import update_metric
-from prometheus.metrics import (
+from metrics.metrics import (
     solana_node_health, solana_node_slots_behind,
     solana_rpc_requests, solana_rpc_errors, solana_rpc_latency
 )

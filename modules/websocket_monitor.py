@@ -4,7 +4,7 @@ import websockets
 from loguru import logger
 from config import SOLANA_WS_ENDPOINT
 from utils.func import update_metric
-from prometheus.metrics import solana_rpc_websocket_connections, solana_rpc_websocket_latency
+from metrics.metrics import solana_rpc_websocket_connections, solana_rpc_websocket_latency
 
 async def check_websocket_health():
     """Check WebSocket connection health by subscribing to slots"""

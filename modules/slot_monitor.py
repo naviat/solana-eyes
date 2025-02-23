@@ -3,7 +3,7 @@ import aiohttp, time
 from loguru import logger
 from config import SOLANA_RPC_ENDPOINT, NETWORK_RPC_ENDPOINT, HEADERS
 from utils.func import update_metric
-from prometheus.metrics import (
+from metrics.metrics import (
     solana_current_slot, solana_net_current_slot, solana_slot_diff,
     solana_block_height, solana_network_block_height, solana_block_height_diff,
     solana_max_shred_insert_slot, solana_max_retransmit_slot,

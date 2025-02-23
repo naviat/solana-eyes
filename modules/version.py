@@ -2,7 +2,7 @@ import aiohttp
 from loguru import logger
 from config import HEADERS, SOLANA_RPC_ENDPOINT, PORT
 from utils.func import update_metric
-from prometheus.metrics import solana_node_version
+from metrics.metrics import solana_node_version
 
 PROMETHEUS_METRICS_URL = f"http://localhost:{PORT}/metrics"
 
