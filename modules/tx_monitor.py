@@ -5,7 +5,7 @@ from utils.func import update_metric
 from metrics.metrics import (
     solana_tx_count, solana_tx_success_rate, solana_tx_error_rate,
     solana_rpc_processed_tx_count, solana_rpc_tx_by_type,
-    solana_rpc_tx_latency
+    solana_rpc_tx_latency, solana_confirmed_transactions_total
 )
 
 async def get_transaction_stats():
@@ -105,3 +105,26 @@ async def get_transaction_types():
             update_metric(solana_rpc_tx_by_type, 0, labels={"tx_type": tx_type})
         update_metric(solana_tx_success_rate, 0)
         update_metric(solana_tx_error_rate, 0)
+
+async def get_confirmed_transactions_total():
+    """Get total confirmed transactions"""
+    payload = {
+        "jsonrpc": "2.0",
+        "id": 1,
+        "method": "getTransactionCount",
+        "params": [{"commitment": "finalized"}]
+    }
+
+    try:
+        async with aiohttp.ClientSession() as session:
+            async with session.post(SOLANA_RPC_ENDPOINT, json=payload, headers=HEADERS) as response:
+                result = await response.json()
+
+        if "result" in result:
+            total_tx = result["result"]
+            update_metric(solana_confirmed_transactions_total, total_tx)
+            logger.info(f"Total confirmed transactions: {total_tx:,.0f}")
+
+    except Exception as e:
+        logger.error(f"Error getting total transactions: {e}")
+        update_metric(solana_confirmed_transactions_total, 0)
