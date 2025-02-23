@@ -1129,7 +1129,7 @@
           "fields": "",
           "values": false
         },
-        "textMode": "auto"
+        "textMode": "value"
       },
       "pluginVersion": "10.0.2",
       "targets": [
@@ -1139,6 +1139,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
+          "exemplar": false,
           "expr": "solana_block_time_diff{app_kubernetes_io_instance=\"$host\"}",
           "instant": false,
           "legendFormat": "{{nodeId}}",
@@ -1420,10 +1421,10 @@
           },
           "editorMode": "code",
           "exemplar": false,
-          "expr": "max by (app_kubernetes_io_instance)(\n  solana_node_health{app_kubernetes_io_instance=\"$host\"}\n)",
-          "instant": true,
+          "expr": "sum(\n  max by (status) (\n    solana_node_health{app_kubernetes_io_instance=\"$host\", status=\"healthy\"}\n  )\n) OR vector(0)",
+          "instant": false,
           "legendFormat": "__auto",
-          "range": false,
+          "range": true,
           "refId": "A"
         }
       ],
@@ -2782,7 +2783,7 @@
       },
       "gridPos": {
         "h": 11,
-        "w": 17,
+        "w": 9,
         "x": 0,
         "y": 19
       },
@@ -2818,6 +2819,99 @@
         }
       ],
       "title": "TX/sec",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "${DS_PROMETHEUS}"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 10,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "never",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 11,
+        "w": 8,
+        "x": 9,
+        "y": 19
+      },
+      "id": 63,
+      "options": {
+        "legend": {
+          "calcs": [
+            "lastNotNull",
+            "max",
+            "mean"
+          ],
+          "displayMode": "table",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "mode": "multi",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "${DS_PROMETHEUS}"
+          },
+          "editorMode": "code",
+          "expr": "rate(solana_confirmed_transactions_total{app_kubernetes_io_instance=~\"$host\"}[5m])",
+          "instant": false,
+          "legendFormat": "TPS (5m avg)",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Transaction Rate",
       "type": "timeseries"
     },
     {
@@ -4264,6 +4358,6 @@
   "timezone": "utc",
   "title": "Solana Monitoring",
   "uid": "ddy9etwe3nzswf",
-  "version": 116,
+  "version": 118,
   "weekStart": ""
 }
